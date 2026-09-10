@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <BodyDef>
+
+        <defName>Crewmate</defName>
+        <label> crewmate body </label>
+        <corePart> 
+            <def> <!-- From BodyParts_Crewmate.xml --> </def>
+            <height> Middle </height>
+            <depth> Outside </depth>
+        </corePart>
+
+        <!-- 
+        Tree of body part list items (<li>)
+        Each needs: def, coverage, height and subparts
+         -->
+        <parts> 
+        </parts>
+    
+    </BodyDef>
+
+</Defs>
+</xml>

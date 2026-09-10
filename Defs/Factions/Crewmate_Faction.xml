@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef>
+        <defName>Crewmate_Faction</defName>
+        <label> <!-- TODO --> </label>
+        <description> <!-- TODO --> </description>
+        <factionIconPath>UI/FactionIcons/Crewmate</factionIconPath>
+		<pawnSingular>crewmate</pawnSingular>
+		<pawnsPlural>crewmates</pawnsPlural>
+
+        <xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Crewmate>1.0</Crewmate>
+			</xenotypeChances>
+		</xenotypeSet>
+
+        <!-- TODO: dialogFaction messages -->
+
+        <!-- TODO: group spawn kinds i.e. traders, combat etc. - more research needed on group types -->
+    </FactionDef>
+
+</Defs>
+</xml>

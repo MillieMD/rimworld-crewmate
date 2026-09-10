@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Body parts needed for the crewmate body type -->
+
+    <BodyPartDef>
+        <defName>CrewmateBody</defName>
+        <label> body </label>
+        <hitPoints> 50 </hitPoints>
+        <permanentInjuryChanceFactor><!-- TODO --></permanentInjuryChanceFactor>
+        <skinCovered>true</skinCovered>
+        <solid>true</solid>
+        <alive>true</alive>
+        <bleedRate><!-- TODO --></bleedRate>
+        <tags> 
+            <!-- TODO 
+            incl. research what tags exist, and what they do -->
+        </tags> 
+    </BodyPartDef>
+
+</Defs>
+</xml>
