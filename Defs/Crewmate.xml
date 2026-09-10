@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>    
+	<XenotypeDef>
+		<defName>amongi</defName>
+		<label>Crewmate</label>
+		<description>Crewmates from the game Among Us</description>
+		<descriptionShort>Crewmates from the game Among Us</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Crewmate</iconPath>
+		<inheritable>true</inheritable>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+			<!-- TODO -->
+        </genes>
+	</XenotypeDef>
+</Defs>
