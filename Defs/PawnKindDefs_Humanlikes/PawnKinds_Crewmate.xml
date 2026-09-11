@@ -3,10 +3,9 @@
 
 <!-- Pawn kinds are presets for world pawns, need to consider what "archetypes" are needed, or if we just want 1 generic -->
 
-    <PawnKindDef> 
-        <!-- TODO: Include: defName, weapons, faction type-->
+    <!-- <PawnKindDef> 
+        
     
-    </PawnKindDef>
+    </PawnKindDef> -->
 
 </Defs>
-</xml>

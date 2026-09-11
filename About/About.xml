@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 
-	<packageId>Serprentino.among-us</packageId>
+	<packageId>Serprentino.AmongUs</packageId>
 
 	<name>Among the Rim</name>
 
 	<authors> 
-		<li> Serprentino </li>
-		<li> DarthSwashbuckler </li>
+		<li>Serprentino</li>
+		<li>DarthSwashbuckler</li>
 	</authors>
 
 	<description>Adds a Crewmate race, based on Among Us</description>
 
-	<modVersion> 0.1 </modVersion>
+	<modVersion>0.1</modVersion>
 
 	<supportedVersions>
 	<li>1.6</li>
 	</supportedVersions>
 
-	<!-- TODO: modDependencies, loadBefore, loadAfter -->
+	<modDependencies> 
+		<li> 
+			<packageId>redmattis.betterprerequisites</packageId>
+			<displayName>Big and Small Framework</displayName>
+		</li>
+	</modDependencies>
 
 </ModMetaData>

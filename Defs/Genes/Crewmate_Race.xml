@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>    
+	<!-- Inherit from human for sensible defaults  -->
+	<ThingDef ParentName="Human">
+		<defName>Crewmate</defName>
+		<label>crewmate</label>
+		<description>Crewmates from the game Among Us</description>
+		<race>
+			<body>Crewmate_Body</body>
+			<baseBodySize>0.75</baseBodySize>
+		</race>
+	</ThingDef>
+</Defs>

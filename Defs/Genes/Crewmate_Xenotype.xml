@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>Crewmate</defName>
+    <label>crewmate</label>
+    <description>Crewmate</description>
+    <descriptionShort>Crewmate</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Custom/CustomXenotypeIcon10</iconPath>
+    <inheritable>true</inheritable>
+    <combatPowerFactor>1.0</combatPowerFactor>
+    <genes>
+      <li>Gene_Crewmate_Body</li>
+    </genes>
+  </XenotypeDef>
+
+</Defs>
