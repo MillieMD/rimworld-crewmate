@@ -11,6 +11,9 @@
     <combatPowerFactor>1.0</combatPowerFactor>
     <genes>
       <li>Gene_Crewmate_Body</li>
+      <li>Skin_DeepRed</li>
+      <li>Skin_Orange</li>
+      <li>Skin_Green</li>
     </genes>
   </XenotypeDef>
 

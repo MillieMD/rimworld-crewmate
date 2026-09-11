@@ -2,6 +2,7 @@
 <Defs>    
     <GeneDef> 
         <defName>Gene_Crewmate_Body</defName>
+        <label>Crewmate Body</label>
         <biostatCpx>1</biostatCpx>
         <biostatMet>0</biostatMet>
         <modExtensions>
