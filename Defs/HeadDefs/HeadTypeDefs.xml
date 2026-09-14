@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <HeadTypeDef ParentName="AverageBase">
+        <defName>Crewmate_Head</defName>
+        <graphicPath>Things/Pawn/Humanlike/Heads/Female/Female_Average_Pointy</graphicPath>
+        <randomChosen>false</randomChosen>
+        <gender>None</gender>
+        <requiredGenes>
+            <li>Gene_Crewmate_Body</li>
+        </requiredGenes>
+    </HeadTypeDef>
+
+</Defs>
