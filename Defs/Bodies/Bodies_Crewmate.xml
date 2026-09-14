@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <BodyDef>
@@ -13,25 +13,7 @@
       </groups>
       <parts>
         <li>
-        <!-- RIBCAGE -->
-          <def>Ribcage</def>
-          <coverage>0.036</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-        <!-- STERNUM -->
-          <def>Sternum</def>
-          <coverage>0.015</coverage>
-          <depth>Inside</depth>
-          <groups>
-            <li>Torso</li>
-          </groups>
-        </li>
-        <li>
-        <!-- PELVIS -->
+          <!-- PELVIS -->
           <def>Pelvis</def>
           <coverage>0.025</coverage>
           <height>Bottom</height>
@@ -40,8 +22,8 @@
             <li>Torso</li>
           </groups>
         </li>
-        <li> 
-        <!-- CUTTLEBONE -->
+        <li>
+          <!-- CUTTLEBONE -->
           <def>Cuttlebone</def>
           <coverage>0.3</coverage>
           <depth>Inside</depth>
@@ -50,7 +32,7 @@
           </groups>
         </li>
         <li>
-        <!-- STOMACH -->
+          <!-- STOMACH -->
           <def>Stomach</def>
           <coverage>0.025</coverage>
           <depth>Inside</depth>
@@ -59,7 +41,7 @@
           </groups>
         </li>
         <li>
-        <!-- HEART 3 -->
+          <!-- HEART 3 -->
           <def>Heart</def>
           <coverage>0.020</coverage>
           <depth>Inside</depth>
@@ -68,7 +50,7 @@
           </groups>
         </li>
         <li>
-        <!-- LUNG L -->
+          <!-- LUNG L -->
           <def>Lung</def>
           <customLabel>left lung</customLabel>
           <coverage>0.025</coverage>
@@ -78,7 +60,7 @@
           </groups>
         </li>
         <li>
-        <!-- LUNG R -->
+          <!-- LUNG R -->
           <def>Lung</def>
           <customLabel>right lung</customLabel>
           <coverage>0.025</coverage>
@@ -88,7 +70,7 @@
           </groups>
         </li>
         <li>
-        <!-- KIDNEY L -->
+          <!-- KIDNEY L -->
           <def>Kidney</def>
           <customLabel>left kidney</customLabel>
           <coverage>0.017</coverage>
@@ -98,7 +80,7 @@
           </groups>
         </li>
         <li>
-        <!-- KIDNEY R -->
+          <!-- KIDNEY R -->
           <def>Kidney</def>
           <customLabel>right kidney</customLabel>
           <coverage>0.017</coverage>
@@ -108,7 +90,7 @@
           </groups>
         </li>
         <li>
-        <!-- LIVER -->
+          <!-- LIVER -->
           <def>Liver</def>
           <coverage>0.025</coverage>
           <depth>Inside</depth>
@@ -117,103 +99,123 @@
           </groups>
         </li>
         <li>
-            <def>HeadWithEarHoles</def>
-            <coverage>0.80</coverage>
-            <groups>
+          <def>Head</def>
+          <coverage>0.80</coverage>
+          <groups>
             <li>UpperHead</li>
             <li>FullHead</li>
             <li>HeadAttackTool</li>
-            </groups>
-            <parts>
+          </groups>
+          <parts>
             <li>
-                <def>Skull</def>
-                <coverage>0.18</coverage>
-                <depth>Inside</depth>
-                <groups>
+              <def>Ear</def>
+              <customLabel>left earhole</customLabel>
+              <depth>Inside</depth>
+              <coverage>0.04</coverage>
+              <groups>
+                <li>UpperHead</li>
+                <li>FullHead</li>
+              </groups>
+            </li>
+            <li>
+              <def>Ear</def>
+              <customLabel>right earhole</customLabel>
+              <depth>Inside</depth>
+              <coverage>0.04</coverage>
+              <groups>
+                <li>UpperHead</li>
+                <li>FullHead</li>
+              </groups>
+            </li>
+            <li>
+              <def>Skull</def>
+              <coverage>0.18</coverage>
+              <depth>Inside</depth>
+              <groups>
                 <li>UpperHead</li>
                 <li>Eyes</li>
                 <li>FullHead</li>
-                </groups>
-                <parts>
+              </groups>
+              <parts>
                 <li>
-                    <def>Brain</def>
-                    <coverage>0.8</coverage>
-                    <groups>
+                  <def>Brain</def>
+                  <coverage>0.8</coverage>
+                  <groups>
                     <li>UpperHead</li>
                     <li>Eyes</li>
                     <li>FullHead</li>
-                    </groups>
+                  </groups>
                 </li>
-                </parts>
+              </parts>
             </li>
 
             <li>
-            <!-- VISOR AND EYES -->
-                <def>Visor</def>
-                <coverage>0.2</coverage>
-                <groups>
+              <!-- VISOR AND EYES -->
+              <def>Visor</def>
+              <coverage>0.2</coverage>
+              <groups>
+                <li>FullHead</li>
+                <li>Eyes</li>
+              </groups>
+              <visibleHediffRots>
+                <li>South</li>
+                <li>West</li>
+              </visibleHediffRots>
+              <parts>
+                <li>
+                  <def>Eye</def>
+                  <customLabel>left eye</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
                     <li>FullHead</li>
                     <li>Eyes</li>
-                </groups>
-                <visibleHediffRots>
-                    <li>South</li>
-                    <li>West</li>
-                </visibleHediffRots>
-                <parts>
-                    <li>
-                        <def>Eye</def>
-                        <customLabel>left eye</customLabel>
-                        <coverage>0.07</coverage>
-                        <groups>
-                        <li>FullHead</li>
-                        <li>Eyes</li>
-                        </groups>
-                        <woundAnchorTag>LeftEye</woundAnchorTag>
-                    </li>
-                    <li>
-                        <def>Eye</def>
-                        <customLabel>right eye</customLabel>
-                        <coverage>0.07</coverage>
-                        <groups>
-                        <li>FullHead</li>
-                        <li>Eyes</li>
-                        </groups>
-                        <woundAnchorTag>RightEye</woundAnchorTag>
-                    </li>
-                </parts>
+                  </groups>
+                  <woundAnchorTag>LeftEye</woundAnchorTag>
+                </li>
+                <li>
+                  <def>Eye</def>
+                  <customLabel>right eye</customLabel>
+                  <coverage>0.07</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                    <li>Eyes</li>
+                  </groups>
+                  <woundAnchorTag>RightEye</woundAnchorTag>
+                </li>
+              </parts>
             </li>
             <li>
-            <!-- NOSE -->
-                <def>Nose</def>
-                <coverage>0</coverage>
-                <groups>
+              <!-- NOSE -->
+              <def>Nose</def>
+              <coverage>0</coverage>
+              <groups>
                 <li>FullHead</li>
-                </groups>
+              </groups>
             </li>
             <li>
-            <!-- MOUTH PIECES -->
-                <def>Jaw</def>
-                <coverage>0.15</coverage>
-                <groups>
+              <!-- MOUTH PIECES -->
+              <def>Jaw</def>
+              <coverage>0.15</coverage>
+              <groups>
                 <li>Teeth</li>
                 <li>FullHead</li>
                 <li>Mouth</li>
-                </groups>
-                <parts>
+              </groups>
+              <parts>
                 <li>
-                    <def>Tongue</def>
-                    <coverage>0.001</coverage>
-                    <depth>Inside</depth>
-                    <groups>
+                  <def>Tongue</def>
+                  <coverage>0.001</coverage>
+                  <depth>Inside</depth>
+                  <groups>
                     <li>FullHead</li>
-                    </groups>
+                  </groups>
                 </li>
-                </parts>
+              </parts>
             </li>
-            </parts>
+          </parts>
         </li>
         <li>
-        <!-- LEFT SHOULER + CHILDREN -->
+          <!-- LEFT SHOULER + CHILDREN -->
           <def>Shoulder</def>
           <customLabel>left shoulder</customLabel>
           <coverage>0.12</coverage>
@@ -223,17 +225,6 @@
             <li>Shoulders</li>
           </groups>
           <parts>
-            <li>
-              <def>Clavicle</def>
-              <customLabel>left clavicle</customLabel>
-              <coverage>0.09</coverage>
-              <height>Top</height>
-              <depth>Inside</depth>
-              <flipGraphic>true</flipGraphic>
-              <groups>
-                <li>Torso</li>
-              </groups>
-            </li>
             <li>
               <def>Arm</def>
               <customLabel>left arm</customLabel>
@@ -297,7 +288,7 @@
           </parts>
         </li>
         <li>
-        <!-- RIGHT SHOULDER + CHILDREN -->
+          <!-- RIGHT SHOULDER + CHILDREN -->
           <def>Shoulder</def>
           <customLabel>right shoulder</customLabel>
           <coverage>0.12</coverage>
@@ -306,16 +297,6 @@
             <li>Shoulders</li>
           </groups>
           <parts>
-            <li>
-              <def>Clavicle</def>
-              <customLabel>right clavicle</customLabel>
-              <coverage>0.09</coverage>
-              <height>Top</height>
-              <depth>Inside</depth>
-              <groups>
-                <li>Torso</li>
-              </groups>
-            </li>
             <li>
               <def>Arm</def>
               <customLabel>right arm</customLabel>
@@ -377,7 +358,7 @@
           </parts>
         </li>
         <li>
-            <!-- LEGS -->
+          <!-- LEGS -->
           <def>Waist</def>
           <coverage>0</coverage>
           <height>Bottom</height>

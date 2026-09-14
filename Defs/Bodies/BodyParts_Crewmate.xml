@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<!-- Body parts needed for the crewmate body type -->
+    <!-- Body parts needed for the crewmate body type -->
 
     <BodyPartDef>
         <defName>Crewmate_Torso</defName>
@@ -13,7 +13,7 @@
         <bleedRate>1</bleedRate>
     </BodyPartDef>
 
-    <BodyPartDef> 
+    <BodyPartDef>
         <defName>Cuttlebone</defName>
         <label>cuttlebone</label>
         <hitPoints>30</hitPoints>
@@ -34,6 +34,9 @@
         <bleedRate>0</bleedRate>
         <canScarify>true</canScarify>
         <beautyRelated>true</beautyRelated>
+        <tags>
+            <li>SightSource</li>
+        </tags>
     </BodyPartDef>
 
 </Defs>
