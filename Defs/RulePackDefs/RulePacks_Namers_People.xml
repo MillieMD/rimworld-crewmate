@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <RulePackDef>
+        <defName>NamerPersonCrewmate</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[colour]</li>
+                <li>r_name->[shade] [colour]</li>
+                <li>r_name->[role]</li>
+                <li>r_name->[colour] [role]</li>
+                <li>r_name->[shade] [colour] [role]</li>
+
+                <li>shade->light</li>
+                <li>shade->dark</li>
+
+                <li>role->scientist</li>
+                <li>role->guardian angel</li>
+                <li>role->engineer</li>
+                <li>role->noisemaker</li>
+                <li>role->tracker</li>
+                <li>role->detective</li>
+                <li>role->judge</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>colour->Names/Colours</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+</Defs>

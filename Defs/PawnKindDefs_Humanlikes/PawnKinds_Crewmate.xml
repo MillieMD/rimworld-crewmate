@@ -3,9 +3,27 @@
 
 <!-- Pawn kinds are presets for world pawns, need to consider what "archetypes" are needed, or if we just want 1 generic -->
 
-    <!-- <PawnKindDef> 
-        
-    
-    </PawnKindDef> -->
+  <PawnKindDef>
+    <defName>Crewmate</defName>
+    <label>crewmate</label>
+    <race>Human</race>
+    <defaultFactionDef>Crewmate_Faction</defaultFactionDef>
+    <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <combatPower>1</combatPower>
+    <apparelMoney>0~1000</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <techHediffsMoney>2000~3000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+    <techHediffsChance>0.40</techHediffsChance>
+    <initialWillRange>0</initialWillRange>
+    <initialResistanceRange>1~3</initialResistanceRange>
+  </PawnKindDef>
 
 </Defs>
