@@ -12,37 +12,18 @@
     <genes>
       <li>Gene_Crewmate_Body</li>
       <li>Crewmate_Backpack</li>
+      <li>Hair_BaldOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      
       <li>VacuumWeakness</li>
-
       <li>NakedSpeed</li>
       <li>MeleeDamage_Weak</li>
       <li>MoveSpeed_Quick</li>
       <li>StrongStomach</li>
       <li>AptitudeStrong_Crafting</li>
-      <li>Hair_BaldOnly</li>
-      <li>Beard_NoBeardOnly</li>
 
       <!-- Colours -->
-      <li>Crewmate_Skin_Red</li>
-      <li>Crewmate_Skin_Blue</li>
-      <li>Crewmate_Skin_Green</li>
-      <li>Crewmate_Skin_Pink</li>
-      <li>Crewmate_Skin_Orange</li>
-      <li>Crewmate_Skin_Yellow</li>
-      <li>Crewmate_Skin_Black</li>
-      <li>Crewmate_Skin_White</li>
-      <li>Crewmate_Skin_Purple</li>
-      <li>Crewmate_Skin_Brown</li>
-      <li>Crewmate_Skin_Cyan</li>
-      <li>Crewmate_Skin_Lime</li>
-      <li>Crewmate_Skin_Maroon</li>
-      <li>Crewmate_Skin_Rose</li>
-      <li>Crewmate_Skin_Banana</li>
-      <li>Crewmate_Skin_Grey</li>
-      <li>Crewmate_Skin_Tan</li>
-      <li>Crewmate_Skin_Coral</li>
-      <li>Crewmate_Skin_Fortegreen</li>
-      <li>Crewmate_Skin_Olive</li>
+      <li>Crewmate_Colour</li>
     </genes>
   </XenotypeDef>
 
