@@ -100,7 +100,7 @@
         </li>
         <li>
           <def>Head</def>
-          <coverage>0.80</coverage>
+          <coverage>0.3</coverage>
           <groups>
             <li>UpperHead</li>
             <li>FullHead</li>
