@@ -10,6 +10,7 @@
         <forcedHeadTypes>
             <li>Crewmate_Head</li>
         </forcedHeadTypes>
+        <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
         <modExtensions>
             <li Class="BigAndSmall.PawnExtension">
                 <thingDefSwap>Crewmate</thingDefSwap>
@@ -17,4 +18,45 @@
             </li>
         </modExtensions>
     </GeneDef>
+
+    <!-- Crewmates are extra weak to the vacuum  -->
+  <GeneDef>
+    <defName>VacuumWeakness</defName>
+    <label>vacuum weak</label>
+    <labelShortAdj>vacuum-weak</labelShortAdj>
+    <description>TODO</description>
+    <iconPath>UI/Icons/Genes/Gene_VacuumResistance</iconPath>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <exclusionTags>
+      <li>VacuumResistance</li>
+      <li>VacuumResistance_Partial</li>
+    </exclusionTags>
+    <immuneToVacuumBurns>true</immuneToVacuumBurns>
+    <displayCategory MayRequire="Ludeon.RimWorld.Biotech">ResistanceAndWeakness</displayCategory>
+    <statOffsets>
+      <VacuumResistance>1.30</VacuumResistance>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+  </GeneDef>
+
+  <GeneDef>
+    <!-- TODO: render backpack -->
+    <defName>Crewmate_Backpack</defName>
+    <label>backpack</label>
+    <labelShortAdj>backpacked</labelShortAdj>
+    <description>TODO</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <statOffsets>
+      <CarryingCapacity>45</CarryingCapacity>
+      <IncomingDamageFactor>0.9</IncomingDamageFactor>
+    </statOffsets>
+    <fur>Furskin</fur>
+  </GeneDef>
+
 </Defs>

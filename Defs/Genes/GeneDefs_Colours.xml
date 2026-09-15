@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+    <GeneDef Name="CrewmateSkinColourOverride" ParentName="GeneSkinColorOverride">
+        <defName>CrewmateSkinColourOverride</defName>
+        <selectionWeight>0.01</selectionWeight>
+        <displayOrderInCategory>0</displayOrderInCategory>
+    </GeneDef>
+
     <!-- RED -->
     <GeneDef ParentName="GeneSkinColorOverride">
         <defName>Crewmate_Skin_Red</defName>
         <label>red skin</label>
         <labelShortAdj>red</labelShortAdj>
-        <description>Carriers of this gene produce a pigment that gives their skin a green color.</description>
+        <description>Carriers of this gene produce a pigment that gives their skin a red color.</description>
         <skinColorOverride>(215,30,34)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -21,6 +27,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- GREEN -->
@@ -28,9 +35,9 @@
         <defName>Crewmate_Skin_Blue</defName>
         <label>blue skin</label>
         <labelShortAdj>blue</labelShortAdj>
-        <description>Carriers of this gene produce a pigment that gives their skin a green color.</description>
+        <description>Carriers of this gene produce a pigment that gives their skin a blue color.</description>
         <skinColorOverride>(29,60,233)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -43,6 +50,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- BLUE -->
@@ -52,7 +60,7 @@
         <labelShortAdj>green</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a green color.</description>
         <skinColorOverride>(27,145,62)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -65,6 +73,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- PINK -->
@@ -74,7 +83,7 @@
         <labelShortAdj>pink</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a pink color.</description>
         <skinColorOverride>(255,99,212)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -87,6 +96,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- ORANGE -->
@@ -96,7 +106,7 @@
         <labelShortAdj>orange</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a orange color.</description>
         <skinColorOverride>(255,151,28)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -109,6 +119,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- YELLOW -->
@@ -118,7 +129,7 @@
         <labelShortAdj>yellow</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a yellow color.</description>
         <skinColorOverride>(255,255,103)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -131,6 +142,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- BLACK -->
@@ -140,7 +152,7 @@
         <labelShortAdj>black</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a black color.</description>
         <skinColorOverride>(74,86,94)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -153,6 +165,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- WHITE -->
@@ -162,7 +175,7 @@
         <labelShortAdj>white</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a white color.</description>
         <skinColorOverride>(233,247,255)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -175,6 +188,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- PURPLE -->
@@ -184,7 +198,7 @@
         <labelShortAdj>purple</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a purple color.</description>
         <skinColorOverride>(120,61,210)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -197,6 +211,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- BROWN -->
@@ -206,7 +221,7 @@
         <labelShortAdj>brown</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a brown color.</description>
         <skinColorOverride>(128,88,45)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -219,6 +234,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- CYAN -->
@@ -228,7 +244,7 @@
         <labelShortAdj>cyan</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a cyan color.</description>
         <skinColorOverride>(68,255,247)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -241,6 +257,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- LIME -->
@@ -250,7 +267,7 @@
         <labelShortAdj>lime</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a lime color.</description>
         <skinColorOverride>(91,254,75)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -263,6 +280,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- MAROON -->
@@ -272,7 +290,7 @@
         <labelShortAdj>maroon</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a maroon color.</description>
         <skinColorOverride>(108,43,61)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -285,6 +303,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- ROSE -->
@@ -294,7 +313,7 @@
         <labelShortAdj>rose</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a rose color.</description>
         <skinColorOverride>(255,214,236)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -307,6 +326,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- BANANA -->
@@ -316,7 +336,7 @@
         <labelShortAdj>banana</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a banana color.</description>
         <skinColorOverride>(255,255,190)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -329,6 +349,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- GREY -->
@@ -338,7 +359,7 @@
         <labelShortAdj>grey</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a grey color.</description>
         <skinColorOverride>(131,151,167)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -351,6 +372,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- TAN -->
@@ -360,7 +382,7 @@
         <labelShortAdj>tan</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a tan color.</description>
         <skinColorOverride>(159,153,137)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -373,6 +395,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- CORAL -->
@@ -382,7 +405,7 @@
         <labelShortAdj>coral</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a coral color.</description>
         <skinColorOverride>(236,117,120)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -395,6 +418,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        
     </GeneDef>
 
     <!-- FORTEGREEN -->
@@ -404,7 +428,7 @@
         <labelShortAdj>fortegreen</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a fortegreen color.</description>
         <skinColorOverride>(38,166,98)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -417,6 +441,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        <selectionWeight>0.05</selectionWeight>
     </GeneDef>
 
     <!-- OLIVE -->
@@ -426,7 +451,7 @@
         <labelShortAdj>olive</labelShortAdj>
         <description>Carriers of this gene produce a pigment that gives their skin a olive color.</description>
         <skinColorOverride>(97,114,24)</skinColorOverride>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        
         <symbolPack>
             <wholeNameSymbols>
                 <li>
@@ -439,6 +464,7 @@
                 </li>
             </prefixSymbols>
         </symbolPack>
+        <selectionWeight>0.05</selectionWeight>
     </GeneDef>
 
 </Defs>
