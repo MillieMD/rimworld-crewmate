@@ -11,6 +11,16 @@
     <combatPowerFactor>1.0</combatPowerFactor>
     <genes>
       <li>Gene_Crewmate_Body</li>
+      <li>Crewmate_Backpack</li>
+      <li>VacuumWeakness</li>
+
+      <li>NakedSpeed</li>
+      <li>MeleeDamage_Weak</li>
+      <li>MoveSpeed_Quick</li>
+      <li>StrongStomach</li>
+      <li>AptitudeStrong_Crafting</li>
+      <li>Hair_BaldOnly</li>
+      <li>Beard_NoBeardOnly</li>
 
       <!-- Colours -->
       <li>Crewmate_Skin_Red</li>
