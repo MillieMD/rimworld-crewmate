@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerSettlementCrewmate</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[moon]</li>
+        <li>r_name->[moon] [type]</li>
+
+        <li>hq->HQ</li>
+
+        <li>type->outpost</li>
+        <li>type->station</li>
+        <li>type->satellite</li>
+        <li>type->orbital</li>
+
+      </rulesStrings>
+      <rulesFiles>
+        <li>moon->Names/Moons</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

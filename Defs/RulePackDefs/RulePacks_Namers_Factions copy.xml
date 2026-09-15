@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerFactionCrewmate</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[c_word] [v_word] [c_word] [v_word] [hq]</li>
+        <li>r_name->[c_word] v_word] [c_word] [v_wordend] [hq]</li>
+
+        <li>hq->HQ</li>
+
+        <li>c_word->mining</li>
+        <li>c_word->refining</li>
+        <li>c_word->science</li>
+        <li>c_word->reflection</li>
+        <li>c_word->processing</li>
+        <li>c_word->research</li>
+        <li>c_word->distribution</li>
+
+        <li>v_word->observation</li>
+        <li>v_word->analysis</li>
+        <li>v_word->education</li>
+        <li>v_word->exploration</li>
+        <li>v_word->experimentation</li>
+        <li>v_word->engineering</li>
+        <li>v_word->intelligence</li>
+        <li>v_word->intergalactic</li>
+
+        <li>v_wordend->association</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

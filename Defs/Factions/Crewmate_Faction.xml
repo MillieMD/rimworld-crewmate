@@ -1,20 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
- 
-    <!-- <FactionDef>
+
+
+    <FactionDef ParentName="FactionBase">
         <defName>Crewmate_Faction</defName>
-        <label> crew</label>
-        <description> crew </description>
-        <factionIconPath>UI/FactionIcons/Crewmate</factionIconPath>
-		<pawnSingular>crewmate</pawnSingular>
-		<pawnsPlural>crewmates</pawnsPlural>
+        <label>research station</label>
+        <description>TODO</description>
+        <pawnSingular>crewmate</pawnSingular>
+        <pawnsPlural>crewmates</pawnsPlural>
+        <leaderTitle>captain</leaderTitle>
+
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>50</configurationListOrderPriority>
+
+        <canStageAttacks>false</canStageAttacks>
+
+        <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+        <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+        <colorSpectrum>
+            <li>(0,0,0)</li>
+            <li>(1,1,1)</li>
+        </colorSpectrum>
+
+        <factionNameMaker>NamerFactionCrewmate</factionNameMaker>
+        <settlementNameMaker>NamerSettlementCrewmate</settlementNameMaker>
+        
+        <techLevel>Spacer</techLevel>
+
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+            </li>
+        </backstoryFilters>
 
         <xenotypeSet Inherit="False">
-			<xenotypeChances>
-				<Crewmate>1.0</Crewmate>
-			</xenotypeChances>
-		</xenotypeSet>
+            <xenotypeChances>
+                <Crewmate>1.0</Crewmate>
+            </xenotypeChances>
+        </xenotypeSet>
 
-    </FactionDef> -->
+    </FactionDef>
 
 </Defs>
