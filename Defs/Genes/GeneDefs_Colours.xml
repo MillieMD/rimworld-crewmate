@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- RED -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Red</defName>
+        <label>red skin</label>
+        <labelShortAdj>red</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a green color.</description>
+        <skinColorOverride>(215,30,34)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinred</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>red</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- GREEN -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Blue</defName>
+        <label>blue skin</label>
+        <labelShortAdj>blue</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a green color.</description>
+        <skinColorOverride>(29,60,233)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinblue</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>blue</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- BLUE -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Green</defName>
+        <label>green skin</label>
+        <labelShortAdj>green</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a green color.</description>
+        <skinColorOverride>(27,145,62)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskingreen</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>green</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- PINK -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Pink</defName>
+        <label>pink skin</label>
+        <labelShortAdj>pink</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a pink color.</description>
+        <skinColorOverride>(255,99,212)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinpink</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>pink</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- ORANGE -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Orange</defName>
+        <label>orange skin</label>
+        <labelShortAdj>orange</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a orange color.</description>
+        <skinColorOverride>(255,151,28)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinorange</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>orange</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- YELLOW -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Yellow</defName>
+        <label>yellow skin</label>
+        <labelShortAdj>yellow</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a yellow color.</description>
+        <skinColorOverride>(255,255,103)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinyellow</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>yellow</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- BLACK -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Black</defName>
+        <label>black skin</label>
+        <labelShortAdj>black</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a black color.</description>
+        <skinColorOverride>(74,86,94)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinblack</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>black</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- WHITE -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_White</defName>
+        <label>white skin</label>
+        <labelShortAdj>white</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a white color.</description>
+        <skinColorOverride>(233,247,255)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinwhite</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>white</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- PURPLE -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Purple</defName>
+        <label>purple skin</label>
+        <labelShortAdj>purple</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a purple color.</description>
+        <skinColorOverride>(120,61,210)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinpurple</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>purple</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- BROWN -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Brown</defName>
+        <label>brown skin</label>
+        <labelShortAdj>brown</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a brown color.</description>
+        <skinColorOverride>(128,88,45)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinbrown</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>brown</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- CYAN -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Cyan</defName>
+        <label>cyan skin</label>
+        <labelShortAdj>cyan</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a cyan color.</description>
+        <skinColorOverride>(68,255,247)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskincyan</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>cyan</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- LIME -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Lime</defName>
+        <label>lime skin</label>
+        <labelShortAdj>lime</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a lime color.</description>
+        <skinColorOverride>(91,254,75)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinlime</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>lime</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- MAROON -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Maroon</defName>
+        <label>maroon skin</label>
+        <labelShortAdj>maroon</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a maroon color.</description>
+        <skinColorOverride>(108,43,61)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinmaroon</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>maroon</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- ROSE -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Rose</defName>
+        <label>rose skin</label>
+        <labelShortAdj>rose</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a rose color.</description>
+        <skinColorOverride>(255,214,236)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinrose</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>rose</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- BANANA -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Banana</defName>
+        <label>banana skin</label>
+        <labelShortAdj>banana</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a banana color.</description>
+        <skinColorOverride>(255,255,190)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinbanana</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>banana</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- GREY -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Grey</defName>
+        <label>grey skin</label>
+        <labelShortAdj>grey</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a grey color.</description>
+        <skinColorOverride>(131,151,167)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskingrey</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>grey</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- TAN -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Tan</defName>
+        <label>tan skin</label>
+        <labelShortAdj>tan</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a tan color.</description>
+        <skinColorOverride>(159,153,137)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskintan</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>tan</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- CORAL -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Coral</defName>
+        <label>coral skin</label>
+        <labelShortAdj>coral</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a coral color.</description>
+        <skinColorOverride>(236,117,120)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskincoral</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>coral</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- FORTEGREEN -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Fortegreen</defName>
+        <label>fortegreen skin</label>
+        <labelShortAdj>fortegreen</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a fortegreen color.</description>
+        <skinColorOverride>(38,166,98)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinfortegreen</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>fortegreen</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- OLIVE -->
+    <GeneDef ParentName="GeneSkinColorOverride">
+        <defName>Crewmate_Skin_Olive</defName>
+        <label>olive skin</label>
+        <labelShortAdj>olive</labelShortAdj>
+        <description>Carriers of this gene produce a pigment that gives their skin a olive color.</description>
+        <skinColorOverride>(97,114,24)</skinColorOverride>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li>
+                    <symbol>crewmateskinolive</symbol>
+                </li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li>
+                    <symbol>olive</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+</Defs>

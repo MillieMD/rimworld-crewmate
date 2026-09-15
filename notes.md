@@ -8,3 +8,5 @@ imposter -> xenogene?
 
 alt: imposter is a gene 
 - imposter vent???
+
+- crewmates ok being naked gene
