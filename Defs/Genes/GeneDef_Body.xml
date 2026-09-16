@@ -10,6 +10,7 @@
     <forcedHeadTypes>
       <li>Crewmate_Head</li>
     </forcedHeadTypes>
+    <bodyType>Standard</bodyType>
     <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
