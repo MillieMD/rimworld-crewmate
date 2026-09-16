@@ -3,7 +3,7 @@
 
     <HeadTypeDef ParentName="AverageBase">
         <defName>Crewmate_Head</defName>
-        <graphicPath>Things/Pawn/Humanlike/Heads/Female/Female_Average_Pointy</graphicPath>
+        <graphicPath>Crewmate/None_Crewmate_Average</graphicPath>
         <randomChosen>false</randomChosen>
         <gender>None</gender>
         <requiredGenes>
