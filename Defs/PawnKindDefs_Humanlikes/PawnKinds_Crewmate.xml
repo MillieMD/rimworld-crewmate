@@ -11,7 +11,7 @@
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <combatPower>1</combatPower>
-    <apparelMoney>0~1000</apparelMoney>
+    <apparelMoney>0</apparelMoney>
     <apparelTags>
       <li>IndustrialBasic</li>
     </apparelTags>

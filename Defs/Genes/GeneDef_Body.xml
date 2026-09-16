@@ -3,18 +3,13 @@
   <!-- Enforces crewmate bodytype, size, and head -->
   <GeneDef>
     <defName>Gene_Crewmate_Body</defName>
+    <iconPath>Crewmate/Naked_Crewmate_south</iconPath>
     <label>Crewmate Body</label>
     <biostatCpx>1</biostatCpx>
     <biostatMet>2</biostatMet>
-    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
     <forcedHeadTypes>
       <li>Crewmate_Head</li>
     </forcedHeadTypes>
-
-    <!-- <forcedBodyTypes>
-      <li>Crewmate</li>
-    </forcedBodyTypes> -->
-    
     <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
@@ -22,6 +17,21 @@
         <forceThingDefSwap>true</forceThingDefSwap>
       </li>
     </modExtensions>
+    
+    <fur>Crewmate_Fur</fur>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+        <!-- <colorType>Skin</colorType> -->
+      </li>
+    </renderNodeProperties>
   </GeneDef>
 
   <!-- Crewmates are extra weak to the vacuum  -->
@@ -79,10 +89,10 @@
             <offset>(0, 0, 0)</offset>
           </dataSouth>
           <dataEast>
-            <offset>(0, 0, 0)</offset>
+            <offset>(-0.25, 0, 0)</offset>
           </dataEast>
           <dataWest>
-            <offset>(0, 0, 0)</offset>
+            <offset>(0.25, 0, 0)</offset>
           </dataWest>
         </drawData>
       </li>
