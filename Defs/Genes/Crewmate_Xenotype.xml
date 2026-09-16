@@ -29,4 +29,21 @@
     </genes>
   </XenotypeDef>
 
+  <XenotypeDef>
+    <defName>Impostor</defName>
+    <label>impostor</label>
+    <description>TODO</description>
+    <descriptionShort>TODO</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Custom/CustomXenotypeIcon10</iconPath>
+    <inheritable>false</inheritable>
+    <combatPowerFactor>1.0</combatPowerFactor>
+    <nameMaker>NamerPersonCrewmate</nameMaker>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+      <li>AptitudeStrong_Melee</li>
+      <li>AptitudeStrong_Shooting</li>
+      <li>XenogermReimplanter</li>
+    </genes>
+  </XenotypeDef>
+
 </Defs>
