@@ -57,7 +57,7 @@
     <immuneToVacuumBurns>true</immuneToVacuumBurns>
     <displayCategory MayRequire="Ludeon.RimWorld.Biotech">ResistanceAndWeakness</displayCategory>
     <statOffsets>
-      <VacuumResistance>1.30</VacuumResistance>
+      <VacuumResistance>-0.3</VacuumResistance>
     </statOffsets>
     <biostatCpx>1</biostatCpx>
     <biostatMet>1</biostatMet>
