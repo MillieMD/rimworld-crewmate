@@ -23,6 +23,9 @@
       <li>MoveSpeed_Quick</li>
       <li>StrongStomach</li>
       <li>AptitudeStrong_Crafting</li>
+	  
+	  <li>BetterMining</li>
+	  <li>MaxTemp_SmallDecrease</li>
 
       <!-- Colours -->
       <li>Crewmate_Colour</li>

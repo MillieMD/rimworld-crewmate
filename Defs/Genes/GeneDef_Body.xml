@@ -4,7 +4,7 @@
   <GeneDef>
     <defName>Gene_Crewmate_Body</defName>
     <iconPath>Crewmate/Naked_Crewmate_south</iconPath>
-    <label>Crewmate Body</label>
+    <label>Crewmate body</label>
 	<description>Carriers of this gene gain the body of a Crewmate. It is smaller than usual, but more metabolically efficient.</description>
     <biostatCpx>1</biostatCpx>
     <biostatMet>2</biostatMet>
@@ -103,6 +103,27 @@
         </drawData>
       </li>
     </renderNodeProperties>
+  </GeneDef>
+  
+  <!-- Increased mining stats -->
+  <GeneDef>
+	<defName>BetterMining</defName>
+    <label>better mining</label>
+    <labelShortAdj>better-mining</labelShortAdj>
+    <description>Carriers of this gene are much better at ore manipulation.</description>
+    <iconPath>UI/Icons/Genes/Skills\Mining\PassionAdd</iconPath>
+    <displayOrderInCategory>30</displayOrderInCategory>
+	
+	<biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+	
+	<passionModType>AddOneLevel</passionModType> <!-- doesnt seem to work -->
+	
+	<statOffsets>
+      <MiningSpeed>0.20</MiningSpeed>
+      <MiningYield>0.10</MiningYield>
+	  <DeepDrillingSpeed>0.20</DeepDrillingSpeed>
+    </statOffsets>
   </GeneDef>
 
 </Defs>
