@@ -25,6 +25,7 @@
     </modExtensions>
     
     <fur>Crewmate_Fur</fur>
+	
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
@@ -37,6 +38,7 @@
         <colorType>Skin</colorType>
         <!-- <colorType>Skin</colorType> -->
       </li>
+
     </renderNodeProperties>
   </GeneDef>
 
@@ -102,6 +104,33 @@
           </dataWest>
         </drawData>
       </li>
+	  
+ 
+		<li>
+			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+			<texPath>Crewmate/Crewmate_Visor</texPath>
+			<parentTagDef>Body</parentTagDef>
+			<baseLayer>70</baseLayer>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<drawData>
+				<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+				
+				<dataNorth>
+					<offset>(0, 0, 0)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0, 0, 0.42)</offset>
+				</dataSouth>
+				<dataEast>
+					<offset>(0.12, 0, 0.42)</offset>
+				</dataEast>
+				<dataWest>
+					<offset>(-0.12, 0, 0.42)</offset>
+				</dataWest>
+			</drawData>
+		</li>
+
     </renderNodeProperties>
   </GeneDef>
   
@@ -117,7 +146,7 @@
 	<biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
 	
-	<passionModType>AddOneLevel</passionModType> <!-- doesnt seem to work -->
+	<!--<passionModType>AddOneLevel</passionModType>  doesnt seem to work -->
 	
 	<statOffsets>
       <MiningSpeed>0.20</MiningSpeed>
