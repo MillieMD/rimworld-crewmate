@@ -5,13 +5,18 @@
     <defName>Gene_Crewmate_Body</defName>
     <iconPath>Crewmate/Naked_Crewmate_south</iconPath>
     <label>Crewmate Body</label>
+	<description>Carriers of this gene gain the body of a Crewmate. It is smaller than usual, but more metabolically efficient.</description>
     <biostatCpx>1</biostatCpx>
     <biostatMet>2</biostatMet>
     <forcedHeadTypes>
       <li>Crewmate_Head</li>
     </forcedHeadTypes>
-    <bodyType>Standard</bodyType>
+    <bodyType>Thin</bodyType>
     <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <!--<statOffsets>
+       <SM_BodySizeOffset>-0.25</SM_BodySizeOffset> 
+    </statOffsets> -->
+	
     <modExtensions>
       <li Class="BigAndSmall.PawnExtension">
         <thingDefSwap>Crewmate</thingDefSwap>
@@ -40,7 +45,7 @@
     <defName>VacuumWeakness</defName>
     <label>vacuum weak</label>
     <labelShortAdj>vacuum-weak</labelShortAdj>
-    <description>TODO</description>
+    <description>Carriers of this gene suffer vacuum burns at a higher rate than normal.</description>
     <iconPath>UI/Icons/Genes/Gene_VacuumResistance</iconPath>
     <displayOrderInCategory>20</displayOrderInCategory>
     <exclusionTags>
@@ -60,16 +65,16 @@
     <defName>Crewmate_Backpack</defName>
     <label>backpack</label>
     <labelShortAdj>backpacked</labelShortAdj>
-    <description>TODO</description>
+    <description>Carriers of this gene develop a special backpack that offers increased carrying capacity and a slight increase to resiliance and coverage.</description>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
     <displayOrderInCategory>400</displayOrderInCategory>
-    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+    <iconPath>backpack</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <statOffsets>
       <CarryingCapacity>45</CarryingCapacity>
-      <IncomingDamageFactor>0.9</IncomingDamageFactor>
+      <IncomingDamageFactor>-0.1</IncomingDamageFactor>
     </statOffsets>
     <renderNodeProperties>
       <li>
@@ -90,10 +95,10 @@
             <offset>(0, 0, 0)</offset>
           </dataSouth>
           <dataEast>
-            <offset>(-0.25, 0, 0)</offset>
+            <offset>(-0.35, 0, 0)</offset>
           </dataEast>
           <dataWest>
-            <offset>(0.25, 0, 0)</offset>
+            <offset>(0.35, 0, 0)</offset>
           </dataWest>
         </drawData>
       </li>

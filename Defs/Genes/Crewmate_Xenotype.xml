@@ -6,7 +6,7 @@
     <label>crewmate</label>
     <description>Crewmate</description>
     <descriptionShort>Crewmate</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/Custom/CustomXenotypeIcon10</iconPath>
+    <iconPath>xenocrew</iconPath>
     <inheritable>true</inheritable>
     <combatPowerFactor>1.0</combatPowerFactor>
     <nameMaker>NamerPersonCrewmate</nameMaker>

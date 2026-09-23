@@ -12,8 +12,10 @@
             <Fat>Crewmate/Naked_Crewmate</Fat>
             <Thin>Crewmate/Naked_Crewmate</Thin>
 
-            <Child>Crewmate/Naked_Crewmate</Child>
-            <Baby>Crewmate/Naked_Crewmate</Baby>
+            <Child>Crewmate/Child_Crewmate</Child>
+            <Baby>Crewmate/Baby_Crewmate</Baby>
+			
+			<!-- <Dessicated>Crewmate/Dessicated_Crewmate</Dessicated> -->
         </bodyTypeGraphicPaths>
     </FurDef>
 </Defs>
