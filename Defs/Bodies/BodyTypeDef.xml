@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <BodyTypeDef>
+        <defName>Crewmate</defName>
+        <headOffset>(0.04, 0.34)</headOffset>
+        <bodyNakedGraphicPath>Crewmate/Naked_Crewmate</bodyNakedGraphicPath>
+        <bodyDessicatedGraphicPath>Crewmate/Dessicated_Crewmate</bodyDessicatedGraphicPath>
+        <bodyGraphicScale>(1, 0.9)</bodyGraphicScale>
+    </BodyTypeDef>
+
+        <BodyTypeDef>
+        <defName>Crewmate_Child</defName>
+        <headOffset>(0.04, 0.34)</headOffset>
+        <bodyNakedGraphicPath>Crewmate/Child_Crewmate</bodyNakedGraphicPath>
+        <bodyDessicatedGraphicPath>Crewmate/Dessicated_Crewmate</bodyDessicatedGraphicPath>
+        <bodyGraphicScale>(1, 0.9)</bodyGraphicScale>
+    </BodyTypeDef>
+</Defs>

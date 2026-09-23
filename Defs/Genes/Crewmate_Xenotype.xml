@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <XenotypeDef>
@@ -16,16 +16,15 @@
       <li>Crewmate_Backpack</li>
       <li>Hair_BaldOnly</li>
       <li>Beard_NoBeardOnly</li>
-      
-      <li>VacuumWeakness</li>
+
       <li>NakedSpeed</li>
-      <li>MeleeDamage_Weak</li>
       <li>MoveSpeed_Quick</li>
       <li>StrongStomach</li>
+      <li>VacuumWeakness</li>
+      <li>MaxTemp_SmallDecrease</li>
+      <li>MeleeDamage_Weak</li>
       <li>AptitudeStrong_Crafting</li>
-	  
-	  <li>BetterMining</li>
-	  <li>MaxTemp_SmallDecrease</li>
+      <li>BetterMining</li>
 
       <!-- Colours -->
       <li>Crewmate_Colour</li>
