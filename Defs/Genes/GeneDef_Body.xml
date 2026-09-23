@@ -113,22 +113,7 @@
 			<parentTagDef>Body</parentTagDef>
 			<baseLayer>70</baseLayer>
 			<rotDrawMode>Fresh, Rotting</rotDrawMode>
-			<drawData>
-				<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-				
-				<dataNorth>
-					<offset>(0, 0, 0)</offset>
-				</dataNorth>
-				<dataSouth>
-					<offset>(0, 0, 0.42)</offset>
-				</dataSouth>
-				<dataEast>
-					<offset>(0.12, 0, 0.42)</offset>
-				</dataEast>
-				<dataWest>
-					<offset>(-0.12, 0, 0.42)</offset>
-				</dataWest>
-			</drawData>
+			<parentTagDef>Head</parentTagDef>
 		</li>
 
     </renderNodeProperties>
