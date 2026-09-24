@@ -22,7 +22,18 @@
 		<li> 
 			<packageId>redmattis.betterprerequisites</packageId>
 			<displayName>Big and Small Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2925432336</steamWorkshopUrl>
+		</li>
+		<li> 
+			<packageId>halicade.randomgeneticsfw</packageId>
+			<displayName>Random Genetics Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3281684320</steamWorkshopUrl>
 		</li>
 	</modDependencies>
+
+	<loadAfter>
+		<li>redmattis.betterprerequisites</li>
+		<li>halicade.randomgeneticsfw</li>
+	</loadAfter>
 
 </ModMetaData>
