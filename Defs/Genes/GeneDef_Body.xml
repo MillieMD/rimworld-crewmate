@@ -25,27 +25,12 @@
     </modExtensions>
   </GeneDef>
 
-  <!-- Crewmates are extra weak to the vacuum  -->
-  <GeneDef>
-    <defName>VacuumWeakness</defName>
-    <label>vacuum weak</label>
-    <labelShortAdj>vacuum-weak</labelShortAdj>
-    <description>Carriers of this gene suffer vacuum burns at a higher rate than normal.</description>
-    <iconPath>UI/Icons/Genes/Gene_VacuumResistance</iconPath>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <displayOrderInCategory>20</displayOrderInCategory>
-    <exclusionTags>
-      <li>VacuumResistance</li>
-      <li>VacuumResistance_Partial</li>
-    </exclusionTags>
-    <immuneToVacuumBurns>true</immuneToVacuumBurns>
-    <displayCategory MayRequire="Ludeon.RimWorld.Biotech">ResistanceAndWeakness</displayCategory>
-    <statOffsets>
-      <VacuumResistance>-0.3</VacuumResistance>
-    </statOffsets>
-  </GeneDef>
-
+  <!-- 
+  Crewmates have a backpack. Provides:
+  - Extra carrying capacity
+  - Removes naked thought + social consequences within Xenotype
+  - Render backpack on their back
+  -->
   <GeneDef>
     <defName>Crewmate_Backpack</defName>
     <label>backpack</label>
@@ -98,28 +83,6 @@
         <parentTagDef>Head</parentTagDef>
       </li>
     </renderNodeProperties>
-  </GeneDef>
-
-  <!-- Increased mining stats -->
-  <GeneDef>
-    <defName>BetterMining</defName>
-    <label>better mining</label>
-    <labelShortAdj>better-mining</labelShortAdj>
-    <description>Carriers of this gene are much better at ore manipulation.</description>
-    <iconPath>UI/Icons/Genes/Skills\Mining\PassionAdd</iconPath>
-    <displayOrderInCategory>30</displayOrderInCategory>
-
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>-1</biostatMet>
-
-    <!--<passionModType>AddOneLevel</passionModType>
-    doesnt seem to work -->
-
-    <statOffsets>
-      <MiningSpeed>0.20</MiningSpeed>
-      <MiningYield>0.10</MiningYield>
-      <DeepDrillingSpeed>0.20</DeepDrillingSpeed>
-    </statOffsets>
   </GeneDef>
 
 </Defs>

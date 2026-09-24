@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+      <!-- Increased mining stats -->
+  <GeneDef>
+    <defName>BetterMining</defName>
+    <label>better mining</label>
+    <labelShortAdj>better-mining</labelShortAdj>
+    <description>Carriers of this gene are much better at ore manipulation.</description>
+    <iconPath>UI/Icons/Genes/Skills\Mining\PassionAdd</iconPath>
+    <displayOrderInCategory>30</displayOrderInCategory>
+
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+
+    <!--<passionModType>AddOneLevel</passionModType>
+    doesnt seem to work -->
+
+    <statOffsets>
+      <MiningSpeed>0.20</MiningSpeed>
+      <MiningYield>0.10</MiningYield>
+      <DeepDrillingSpeed>0.20</DeepDrillingSpeed>
+    </statOffsets>
+  </GeneDef>
+</Defs>

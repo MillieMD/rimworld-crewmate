@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+      <!-- Crewmates are extra weak to the vacuum  -->
+  <GeneDef>
+    <defName>VacuumWeakness</defName>
+    <label>vacuum weak</label>
+    <labelShortAdj>vacuum-weak</labelShortAdj>
+    <description>Carriers of this gene suffer vacuum burns at a higher rate than normal.</description>
+    <iconPath>UI/Icons/Genes/Gene_VacuumResistance</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <exclusionTags>
+      <li>VacuumResistance</li>
+      <li>VacuumResistance_Partial</li>
+    </exclusionTags>
+    <immuneToVacuumBurns>false</immuneToVacuumBurns>
+    <displayCategory MayRequire="Ludeon.RimWorld.Biotech">ResistanceAndWeakness</displayCategory>
+    <statOffsets>
+      <VacuumResistance>-0.3</VacuumResistance>
+    </statOffsets>
+  </GeneDef>
+</Defs>
