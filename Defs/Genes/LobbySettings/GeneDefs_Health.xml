@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Crewmate_ImmunityHealing</defName>
+        <label>voting time</label>
+        <labelShortAdj>voted</labelShortAdj>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                        <genesAndWeight>
+                            <li><genes><li>CrewmateImmunityHealing_SmallDecrease</li></genes></li>
+                            <li><genes><li>CrewmateImmunityHealing_TinyDecrease</li></genes></li>
+                            <li><genes><li>CrewmateImmunityHealing_NoChange</li></genes></li>
+                            <li><genes><li>CrewmateImmunityHealing_TinyIncrease</li></genes></li>
+                            <li><genes><li>CrewmateImmunityHealing_SmallIncrease</li></genes></li>
+                        </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="CrewmateImmunityHealingBase" Abstract="True">
+        <label>voting time</label>
+        <labelShortAdj>voted</labelShortAdj>
+        <description>Carriers of this gene gain immunity and heal like a crewmate.</description>
+        <displayCategory>Healing</displayCategory>
+
+        <exclusionTags>
+            <li>Immunity</li>
+            <li>WoundHealingRate</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateImmunityHealingBase">
+        <defName>CrewmateImmunityHealing_SmallDecrease</defName>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <ImmunityGainSpeed>0.95</ImmunityGainSpeed>
+            <InjuryHealingFactor>0.9</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateImmunityHealingBase">
+        <defName>CrewmateImmunityHealing_TinyDecrease</defName>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <statFactors>
+            <ImmunityGainSpeed>0.975</ImmunityGainSpeed>
+            <InjuryHealingFactor>0.95</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateImmunityHealingBase">
+        <defName>CrewmateImmunityHealing_NoChange</defName>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <statFactors>
+            <ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+            <InjuryHealingFactor>1.0</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateImmunityHealingBase">
+        <defName>CrewmateImmunityHealing_TinyIncrease</defName>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <statFactors>
+            <ImmunityGainSpeed>1.025</ImmunityGainSpeed>
+            <InjuryHealingFactor>1.05</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateImmunityHealingBase">
+        <defName>CrewmateImmunityHealing_SmallIncrease</defName>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <statFactors>
+            <ImmunityGainSpeed>1.05</ImmunityGainSpeed>
+            <InjuryHealingFactor>1.1</InjuryHealingFactor>
+        </statFactors>
+    </GeneDef>
+
+
+</Defs>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Crewmate_Sleep</defName>
+        <label>discussion time</label>
+        <labelShortAdj>discussed</labelShortAdj>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                    <genesAndWeight>
+                        <li><genes><li>CrewmateSleep_SmallDecrease</li></genes></li>
+                        <li><genes><li>CrewmateSleep_TinyDecrease</li></genes></li>
+                        <li><genes><li>CrewmateSleep_NoChange</li></genes></li>
+                        <li><genes><li>CrewmateSleep_TinyIncrease</li></genes></li>
+                        <li><genes><li>CrewmateSleep_SmallIncrease</li></genes></li>
+                    </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="CrewmateSleepBase" Abstract="True">
+        <label>discussion time</label>
+        <labelShortAdj>discussed</labelShortAdj>
+        <description>Carriers of this gene sleep like a crewmate.</description>
+        <displayCategory>Sleep</displayCategory>
+
+        <!-- TODO: B&S prereq crewmate race -->
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSleepBase">
+        <defName>CrewmateSleep_SmallDecrease</defName>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <RestFallRateFactor>0.9</RestFallRateFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSleepBase">
+        <defName>CrewmateSleep_TinyDecrease</defName>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <statFactors>
+            <RestFallRateFactor>0.95</RestFallRateFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSleepBase">
+        <defName>CrewmateSleep_NoChange</defName>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <statFactors>
+            <RestFallRateFactor>1.0</RestFallRateFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSleepBase">
+        <defName>CrewmateSleep_TinyIncrease</defName>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <statFactors>
+            <RestFallRateFactor>1.05</RestFallRateFactor>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSleepBase">
+        <defName>CrewmateSleep_SmallIncrease</defName>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <statFactors>
+            <RestFallRateFactor>1.1</RestFallRateFactor>
+        </statFactors>
+    </GeneDef>
+
+
+</Defs>

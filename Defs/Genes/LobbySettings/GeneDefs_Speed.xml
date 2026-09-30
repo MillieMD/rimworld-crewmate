@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Crewmate_Speed</defName>
+        <label>speed</label>
+        <labelShortAdj>speeded</labelShortAdj>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                        <genesAndWeight>
+                            <li><genes><li>CrewmateSpeed_SmallDecrease</li></genes></li>
+                            <li><genes><li>CrewmateSpeed_TinyDecrease</li></genes></li>
+                            <li><genes><li>CrewmateSpeed_NoChange</li></genes></li>
+                            <li><genes><li>CrewmateSpeed_TinyIncrease</li></genes></li>
+                            <li><genes><li>CrewmateSpeed_SmallIncrease</li></genes></li>
+                        </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="CrewmateSpeedBase" Abstract="True">
+        <label>walking speed</label>
+        <labelShortAdj>crew speed</labelShortAdj>
+        <description>Carriers of this gene move at a crewmate speed.</description>
+        <displayCategory>Movement</displayCategory>
+
+        <exclusionTags>
+            <li>MoveSpeed</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSpeedBase">
+        <defName>CrewmateSpeed_SmallDecrease</defName>
+        <displayOrderInCategory>0</displayOrderInCategory>
+
+        <statOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSpeedBase">
+        <defName>CrewmateSpeed_TinyDecrease</defName>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <statOffsets>
+            <MoveSpeed>-0.05</MoveSpeed>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSpeedBase">
+        <defName>CrewmateSpeed_NoChange</defName>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <statOffsets>
+            <MoveSpeed>0</MoveSpeed>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSpeedBase">
+        <defName>CrewmateSpeed_TinyIncrease</defName>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <statOffsets>
+            <MoveSpeed>0.05</MoveSpeed>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateSpeedBase">
+        <defName>CrewmateSpeed_SmallIncrease</defName>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <statOffsets>
+            <MoveSpeed>0.1</MoveSpeed>
+        </statOffsets>
+    </GeneDef>
+
+
+</Defs>

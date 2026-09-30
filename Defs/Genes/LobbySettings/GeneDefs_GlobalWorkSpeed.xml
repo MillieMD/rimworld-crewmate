@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Crewmate_GlobalWorkSpeed</defName>
+        <label>task count</label>
+        <labelShortAdj>tasked</labelShortAdj>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                    <genesAndWeight>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_SmallDecrease</li></genes></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyDecrease</li></genes></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_NoChange</li></genes></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyIncrease</li></genes></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_SmallIncrease</li></genes></li>
+                    </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="CrewmateGlobalWorkSpeedBase" Abstract="True">
+        <label>task count</label>
+        <labelShortAdj>tasked</labelShortAdj>
+        <description>Carriers of this gene work at a crewmate speed.</description>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
+        <defName>CrewmateGlobalWorkSpeed_SmallDecrease</defName>
+        <displayOrderInCategory>0</displayOrderInCategory>
+
+        <statOffsets>
+            <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
+        <defName>CrewmateGlobalWorkSpeed_TinyDecrease</defName>
+          <displayOrderInCategory>1</displayOrderInCategory>
+        <statOffsets>
+            <WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
+        <defName>CrewmateGlobalWorkSpeed_NoChange</defName>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <statOffsets>
+            <WorkSpeedGlobal>0</WorkSpeedGlobal>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
+        <defName>CrewmateGlobalWorkSpeed_TinyIncrease</defName>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <statOffsets>
+            <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
+        <defName>CrewmateGlobalWorkSpeed_SmallIncrease</defName>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <statOffsets>
+            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+    </GeneDef>
+
+
+</Defs>

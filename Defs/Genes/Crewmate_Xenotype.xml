@@ -12,22 +12,31 @@
     <nameMaker>NamerPersonCrewmate</nameMaker>
     <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
+      <!-- Cosmetic -->
       <li>Gene_Crewmate_Body</li>
       <li>Crewmate_Backpack</li>
       <li>Hair_BaldOnly</li>
       <li>Beard_NoBeardOnly</li>
 
-      <li>NakedSpeed</li>
-      <li>MoveSpeed_Quick</li>
+      
+      <!-- Colours -->
+      <li>Crewmate_Colour</li>
+      
+      <li>Crewmate_Role</li>
+      
+      <!-- Lobby Settings -->
+      <li>Crewmate_Speed</li>
+      <li>Crewmate_Vision</li>
+      <li>Crewmate_GlobalWorkSpeed</li>
+      <li>Crewmate_ImmunityHealing</li>
+      <li>Crewmate_Sleep</li>
+
       <li>StrongStomach</li>
       <li>VacuumWeakness</li>
       <li>MaxTemp_SmallDecrease</li>
       <li>MeleeDamage_Weak</li>
       <li>AptitudeStrong_Crafting</li>
       <li>BetterMining</li>
-
-      <!-- Colours -->
-      <li>Crewmate_Colour</li>
     </genes>
   </XenotypeDef>
 

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Crewmate_Role</defName>
+        <label>crewmate role</label>
+        <labelShortAdj>employed</labelShortAdj>
+        <description> Carriers of this gene may have a random crewmate role.</description>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                        <filler>50</filler>
+                        <genesAndWeight>
+                            <li><genes><li>Crewmate_Role_Scientist</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Angel</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Engineer</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Noisemaker</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Tracker</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Detective</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Judge</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Influencer</li></genes></li>
+                        </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="Crewmate_Role" Abstract="True">
+        <displayCategory>Crewmate_Role</displayCategory>
+        <biostatCpx>5</biostatCpx>
+        <prerequisite>Gene_Crewmate_Body</prerequisite>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Scientist</defName>
+        <label>scientist</label>
+        <labelShortAdj>scientist</labelShortAdj>
+        <description>Carriers of this gene have the scientist role.</description>
+
+        <aptitudes>
+            <Intellectual>4</Intellectual>
+            <Medicine>4</Medicine>
+        </aptitudes>
+        <passionMod>
+            <skill>Intellectual</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Angel</defName>
+        <label>guardian angel</label>
+        <labelShortAdj>angel</labelShortAdj>
+        <description>Carriers of this gene have the guardian angel role.</description>
+
+        <aptitudes>
+            <Cooking>4</Cooking>
+            <Medicine>4</Medicine>
+        </aptitudes>
+        <passionMod>
+            <skill>Medicine</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Engineer</defName>
+        <label>engineer</label>
+        <labelShortAdj>engineer</labelShortAdj>
+        <description>Carriers of this gene have the engineer role.</description>
+
+        <aptitudes>
+            <Construction>4</Construction>
+            <Crafting>4</Crafting>
+        </aptitudes>
+        <passionMod>
+            <skill>Construction</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Noisemaker</defName>
+        <label>noisemaker</label>
+        <labelShortAdj>noisy</labelShortAdj>
+        <description>Carriers of this gene have the noisemaker role.</description>
+
+        <aptitudes>
+            <Crafting>4</Crafting>
+            <Artistic>4</Artistic>
+        </aptitudes>
+        <passionMod>
+            <skill>Crafting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Tracker</defName>
+        <label>tracker</label>
+        <labelShortAdj>tracker</labelShortAdj>
+        <description>Carriers of this gene have the tracker role.</description>
+
+        <aptitudes>
+            <Plants>4</Plants>
+            <Animals>4</Animals>
+        </aptitudes>
+        <passionMod>
+            <skill>Animals</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Detective</defName>
+        <label>detective</label>
+        <labelShortAdj>detective</labelShortAdj>
+        <description>Carriers of this gene have the detective role.</description>
+
+        <aptitudes>
+            <Shooting>4</Shooting>
+            <Intellectual>4</Intellectual>
+        </aptitudes>
+        <passionMod>
+            <skill>Shooting</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Judge</defName>
+        <label>judge</label>
+        <labelShortAdj>judge</labelShortAdj>
+        <description>Carriers of this gene have the judge role.</description>
+
+        <aptitudes>
+            <Social>4</Social>
+            <Mining>4</Mining>
+        </aptitudes>
+        <passionMod>
+            <skill>Social</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+    <GeneDef ParentName="Crewmate_Role">
+        <defName>Crewmate_Role_Influencer</defName>
+        <label>influencer</label>
+        <labelShortAdj>influencer</labelShortAdj>
+        <description>Carriers of this gene have the influencer role.</description>
+
+        <aptitudes>
+            <Social>4</Social>
+            <Artistic>4</Artistic>
+        </aptitudes>
+        <passionMod>
+            <skill>Artistic</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+    </GeneDef>
+
+</Defs>

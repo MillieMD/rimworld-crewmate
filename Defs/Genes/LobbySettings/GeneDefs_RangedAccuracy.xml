@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Crewmate_Vision</defName>
+        <label>vision</label>
+        <labelShortAdj>visioned</labelShortAdj>
+        <description>Carriers of this gene see how a crewmate does.</description>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                        <genesAndWeight>
+                            <li><genes><li>CrewmateVision_SmallDecrease</li></genes></li>
+                            <li><genes><li>CrewmateVision_TinyDecrease</li></genes></li>
+                            <li><genes><li>CrewmateVision_NoChange</li></genes></li>
+                            <li><genes><li>CrewmateVision_TinyIncrease</li></genes></li>
+                            <li><genes><li>CrewmateVision_SmallIncrease</li></genes></li>
+                        </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="CrewmateVisionBase" Abstract="True">
+        <label>vision</label>
+        <labelShortAdj>visioned</labelShortAdj>
+        <description>Carriers of this gene see how a crewmate does.</description>
+        <displayCategory>Aptitudes</displayCategory>
+
+        <exclusionTags>
+            <li>ShootingAccuracy</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateVisionBase">
+        <defName>CrewmateVision_SmallDecrease</defName>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statOffsets>
+            <ShootingAccuracyFactor_Long>0.9</ShootingAccuracyFactor_Long>
+            <ShootingAccuracyFactor_Medium>0.95</ShootingAccuracyFactor_Medium>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateVisionBase">
+        <defName>CrewmateVision_TinyDecrease</defName>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <statOffsets>
+            <ShootingAccuracyFactor_Long>0.95</ShootingAccuracyFactor_Long>
+            <ShootingAccuracyFactor_Medium>1.0</ShootingAccuracyFactor_Medium>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateVisionBase">
+        <defName>CrewmateVision_NoChange</defName>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <statOffsets>
+            <ShootingAccuracyFactor_Long>1.0</ShootingAccuracyFactor_Long>
+            <ShootingAccuracyFactor_Medium>1.0</ShootingAccuracyFactor_Medium>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateVisionBase">
+        <defName>CrewmateVision_TinyIncrease</defName>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <statOffsets>
+            <ShootingAccuracyFactor_Long>1.0</ShootingAccuracyFactor_Long>
+            <ShootingAccuracyFactor_Medium>1.05</ShootingAccuracyFactor_Medium>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="CrewmateVisionBase">
+        <defName>CrewmateVision_SmallIncrease</defName>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <statOffsets>
+            <ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
+            <ShootingAccuracyFactor_Medium>1.1</ShootingAccuracyFactor_Medium>
+        </statOffsets>
+    </GeneDef>
+
+
+</Defs>
