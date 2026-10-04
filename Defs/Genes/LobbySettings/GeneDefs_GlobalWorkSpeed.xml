@@ -27,11 +27,13 @@
         <label>task count</label>
         <labelShortAdj>tasked</labelShortAdj>
         <description>Carriers of this gene work at a crewmate speed.</description>
+		<displayCategory>Crewmate_Lobby</displayCategory>
+		<displayOrderInCategory>2</displayOrderInCategory>
     </GeneDef>
 
     <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
         <defName>CrewmateGlobalWorkSpeed_SmallDecrease</defName>
-        <displayOrderInCategory>0</displayOrderInCategory>
+		<iconPath>lobbygenes/workgenebigdown</iconPath> 
 
         <statOffsets>
             <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
@@ -40,7 +42,7 @@
 
     <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
         <defName>CrewmateGlobalWorkSpeed_TinyDecrease</defName>
-          <displayOrderInCategory>1</displayOrderInCategory>
+		  <iconPath>lobbygenes/workgenesmalldown</iconPath> 
         <statOffsets>
             <WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
         </statOffsets>
@@ -48,7 +50,7 @@
 
     <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
         <defName>CrewmateGlobalWorkSpeed_NoChange</defName>
-        <displayOrderInCategory>2</displayOrderInCategory>
+		<iconPath>lobbygenes/workgenenochange</iconPath> 
         <statOffsets>
             <WorkSpeedGlobal>0</WorkSpeedGlobal>
         </statOffsets>
@@ -56,7 +58,7 @@
 
     <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
         <defName>CrewmateGlobalWorkSpeed_TinyIncrease</defName>
-        <displayOrderInCategory>3</displayOrderInCategory>
+		<iconPath>lobbygenes/workgenesmallup</iconPath> 
         <statOffsets>
             <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
         </statOffsets>
@@ -64,7 +66,7 @@
 
     <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">
         <defName>CrewmateGlobalWorkSpeed_SmallIncrease</defName>
-        <displayOrderInCategory>4</displayOrderInCategory>
+		<iconPath>lobbygenes/workgenebigup</iconPath> 
         <statOffsets>
             <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
         </statOffsets>

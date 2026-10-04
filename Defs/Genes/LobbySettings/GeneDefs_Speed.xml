@@ -27,7 +27,8 @@
         <label>walking speed</label>
         <labelShortAdj>crew speed</labelShortAdj>
         <description>Carriers of this gene move at a crewmate speed.</description>
-        <displayCategory>Movement</displayCategory>
+		<displayCategory>Crewmate_Lobby</displayCategory>
+		<displayOrderInCategory>0</displayOrderInCategory>
 
         <exclusionTags>
             <li>MoveSpeed</li>
@@ -36,7 +37,7 @@
 
     <GeneDef ParentName="CrewmateSpeedBase">
         <defName>CrewmateSpeed_SmallDecrease</defName>
-        <displayOrderInCategory>0</displayOrderInCategory>
+		<iconPath>lobbygenes/speedgenebigdown</iconPath> 
 
         <statOffsets>
             <MoveSpeed>-0.1</MoveSpeed>
@@ -45,7 +46,7 @@
 
     <GeneDef ParentName="CrewmateSpeedBase">
         <defName>CrewmateSpeed_TinyDecrease</defName>
-        <displayOrderInCategory>1</displayOrderInCategory>
+		<iconPath>lobbygenes/speedgenesmalldown</iconPath> 
         <statOffsets>
             <MoveSpeed>-0.05</MoveSpeed>
         </statOffsets>
@@ -53,7 +54,7 @@
 
     <GeneDef ParentName="CrewmateSpeedBase">
         <defName>CrewmateSpeed_NoChange</defName>
-        <displayOrderInCategory>2</displayOrderInCategory>
+		<iconPath>lobbygenes/speedgenenochange</iconPath> 
         <statOffsets>
             <MoveSpeed>0</MoveSpeed>
         </statOffsets>
@@ -61,7 +62,7 @@
 
     <GeneDef ParentName="CrewmateSpeedBase">
         <defName>CrewmateSpeed_TinyIncrease</defName>
-        <displayOrderInCategory>3</displayOrderInCategory>
+		<iconPath>lobbygenes/speedgenesmallup</iconPath> 
         <statOffsets>
             <MoveSpeed>0.05</MoveSpeed>
         </statOffsets>
@@ -69,7 +70,7 @@
 
     <GeneDef ParentName="CrewmateSpeedBase">
         <defName>CrewmateSpeed_SmallIncrease</defName>
-        <displayOrderInCategory>4</displayOrderInCategory>
+		<iconPath>lobbygenes/speedgenebigup</iconPath> 
         <statOffsets>
             <MoveSpeed>0.1</MoveSpeed>
         </statOffsets>

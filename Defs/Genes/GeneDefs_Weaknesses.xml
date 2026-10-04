@@ -6,7 +6,7 @@
     <label>vacuum weak</label>
     <labelShortAdj>vacuum-weak</labelShortAdj>
     <description>Carriers of this gene suffer vacuum burns at a higher rate than normal.</description>
-    <iconPath>UI/Icons/Genes/Gene_VacuumResistance</iconPath>
+    <iconPath>Gene_WeakVacuum</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>1</biostatMet>
     <displayOrderInCategory>20</displayOrderInCategory>

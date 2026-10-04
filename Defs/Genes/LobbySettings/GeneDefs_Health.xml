@@ -28,6 +28,9 @@
         <labelShortAdj>voted</labelShortAdj>
         <description>Carriers of this gene gain immunity and heal like a crewmate.</description>
         <displayCategory>Healing</displayCategory>
+		<displayCategory>Crewmate_Lobby</displayCategory>
+		<displayOrderInCategory>4</displayOrderInCategory>
+
 
         <exclusionTags>
             <li>Immunity</li>
@@ -37,7 +40,7 @@
 
     <GeneDef ParentName="CrewmateImmunityHealingBase">
         <defName>CrewmateImmunityHealing_SmallDecrease</defName>
-        <displayOrderInCategory>0</displayOrderInCategory>
+		<iconPath>lobbygenes/healthinggenebigdown</iconPath> 
         <statFactors>
             <ImmunityGainSpeed>0.95</ImmunityGainSpeed>
             <InjuryHealingFactor>0.9</InjuryHealingFactor>
@@ -46,7 +49,7 @@
 
     <GeneDef ParentName="CrewmateImmunityHealingBase">
         <defName>CrewmateImmunityHealing_TinyDecrease</defName>
-        <displayOrderInCategory>1</displayOrderInCategory>
+		<iconPath>lobbygenes/healthinggenesmalldown</iconPath> 
         <statFactors>
             <ImmunityGainSpeed>0.975</ImmunityGainSpeed>
             <InjuryHealingFactor>0.95</InjuryHealingFactor>
@@ -55,7 +58,7 @@
 
     <GeneDef ParentName="CrewmateImmunityHealingBase">
         <defName>CrewmateImmunityHealing_NoChange</defName>
-        <displayOrderInCategory>2</displayOrderInCategory>
+		<iconPath>lobbygenes/healthinggenenochange</iconPath> 
         <statFactors>
             <ImmunityGainSpeed>1.0</ImmunityGainSpeed>
             <InjuryHealingFactor>1.0</InjuryHealingFactor>
@@ -64,7 +67,7 @@
 
     <GeneDef ParentName="CrewmateImmunityHealingBase">
         <defName>CrewmateImmunityHealing_TinyIncrease</defName>
-        <displayOrderInCategory>3</displayOrderInCategory>
+		<iconPath>lobbygenes/healthinggenesmallup</iconPath> 
         <statFactors>
             <ImmunityGainSpeed>1.025</ImmunityGainSpeed>
             <InjuryHealingFactor>1.05</InjuryHealingFactor>
@@ -73,7 +76,7 @@
 
     <GeneDef ParentName="CrewmateImmunityHealingBase">
         <defName>CrewmateImmunityHealing_SmallIncrease</defName>
-        <displayOrderInCategory>4</displayOrderInCategory>
+		<iconPath>lobbygenes/healthinggenebigup</iconPath> 
         <statFactors>
             <ImmunityGainSpeed>1.05</ImmunityGainSpeed>
             <InjuryHealingFactor>1.1</InjuryHealingFactor>

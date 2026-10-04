@@ -28,7 +28,8 @@
         <label>vision</label>
         <labelShortAdj>visioned</labelShortAdj>
         <description>Carriers of this gene see how a crewmate does.</description>
-        <displayCategory>Aptitudes</displayCategory>
+        <displayCategory>Crewmate_Lobby</displayCategory>
+		<displayOrderInCategory>1</displayOrderInCategory>
 
         <exclusionTags>
             <li>ShootingAccuracy</li>
@@ -37,47 +38,47 @@
 
     <GeneDef ParentName="CrewmateVisionBase">
         <defName>CrewmateVision_SmallDecrease</defName>
-        <displayOrderInCategory>0</displayOrderInCategory>
-        <statOffsets>
+		<iconPath>lobbygenes/shootgenebigdown</iconPath> 
+        <statFactors>
             <ShootingAccuracyFactor_Long>0.9</ShootingAccuracyFactor_Long>
             <ShootingAccuracyFactor_Medium>0.95</ShootingAccuracyFactor_Medium>
-        </statOffsets>
+        </statFactors>
     </GeneDef>
 
     <GeneDef ParentName="CrewmateVisionBase">
         <defName>CrewmateVision_TinyDecrease</defName>
-        <displayOrderInCategory>1</displayOrderInCategory>
-        <statOffsets>
+		<iconPath>lobbygenes/shootgenesmalldown</iconPath> 
+        <statFactors>
             <ShootingAccuracyFactor_Long>0.95</ShootingAccuracyFactor_Long>
             <ShootingAccuracyFactor_Medium>1.0</ShootingAccuracyFactor_Medium>
-        </statOffsets>
+        </statFactors>
     </GeneDef>
 
     <GeneDef ParentName="CrewmateVisionBase">
         <defName>CrewmateVision_NoChange</defName>
-        <displayOrderInCategory>2</displayOrderInCategory>
-        <statOffsets>
+		<iconPath>lobbygenes/shootgenenochange</iconPath> 
+        <statFactors>
             <ShootingAccuracyFactor_Long>1.0</ShootingAccuracyFactor_Long>
             <ShootingAccuracyFactor_Medium>1.0</ShootingAccuracyFactor_Medium>
-        </statOffsets>
+        </statFactors>
     </GeneDef>
 
     <GeneDef ParentName="CrewmateVisionBase">
         <defName>CrewmateVision_TinyIncrease</defName>
-        <displayOrderInCategory>3</displayOrderInCategory>
-        <statOffsets>
+		<iconPath>lobbygenes/shootgenesmallup</iconPath> 
+        <statFactors>
             <ShootingAccuracyFactor_Long>1.0</ShootingAccuracyFactor_Long>
             <ShootingAccuracyFactor_Medium>1.05</ShootingAccuracyFactor_Medium>
-        </statOffsets>
+        </statFactors>
     </GeneDef>
 
     <GeneDef ParentName="CrewmateVisionBase">
         <defName>CrewmateVision_SmallIncrease</defName>
-        <displayOrderInCategory>4</displayOrderInCategory>
-        <statOffsets>
+		<iconPath>lobbygenes/shootgenebigup</iconPath> 
+        <statFactors>
             <ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
             <ShootingAccuracyFactor_Medium>1.1</ShootingAccuracyFactor_Medium>
-        </statOffsets>
+        </statFactors>
     </GeneDef>
 
 

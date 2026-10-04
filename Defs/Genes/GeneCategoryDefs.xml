@@ -6,4 +6,10 @@
         <label>crewmate role</label>
         <displayPriorityInXenotype>100</displayPriorityInXenotype>
     </GeneCategoryDef>
+	
+	<GeneCategoryDef>
+        <defName>Crewmate_Lobby</defName>
+        <label>lobby settings</label>
+        <displayPriorityInXenotype>600</displayPriorityInXenotype>
+    </GeneCategoryDef>
 </Defs>

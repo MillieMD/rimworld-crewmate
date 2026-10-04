@@ -28,13 +28,15 @@
         <labelShortAdj>discussed</labelShortAdj>
         <description>Carriers of this gene sleep like a crewmate.</description>
         <displayCategory>Sleep</displayCategory>
+		<displayCategory>Crewmate_Lobby</displayCategory>
+		<displayOrderInCategory>3</displayOrderInCategory>
 
         <!-- TODO: B&S prereq crewmate race -->
     </GeneDef>
 
     <GeneDef ParentName="CrewmateSleepBase">
         <defName>CrewmateSleep_SmallDecrease</defName>
-        <displayOrderInCategory>0</displayOrderInCategory>
+		<iconPath>lobbygenes/sleepgenebigdown</iconPath> 
         <statFactors>
             <RestFallRateFactor>0.9</RestFallRateFactor>
         </statFactors>
@@ -42,7 +44,7 @@
 
     <GeneDef ParentName="CrewmateSleepBase">
         <defName>CrewmateSleep_TinyDecrease</defName>
-        <displayOrderInCategory>1</displayOrderInCategory>
+		<iconPath>lobbygenes/sleepgenesmalldown</iconPath> 
         <statFactors>
             <RestFallRateFactor>0.95</RestFallRateFactor>
         </statFactors>
@@ -50,7 +52,7 @@
 
     <GeneDef ParentName="CrewmateSleepBase">
         <defName>CrewmateSleep_NoChange</defName>
-        <displayOrderInCategory>2</displayOrderInCategory>
+		<iconPath>lobbygenes/sleepgenenochange</iconPath> 
         <statFactors>
             <RestFallRateFactor>1.0</RestFallRateFactor>
         </statFactors>
@@ -58,7 +60,7 @@
 
     <GeneDef ParentName="CrewmateSleepBase">
         <defName>CrewmateSleep_TinyIncrease</defName>
-        <displayOrderInCategory>3</displayOrderInCategory>
+		<iconPath>lobbygenes/sleepgenesmallup</iconPath> 
         <statFactors>
             <RestFallRateFactor>1.05</RestFallRateFactor>
         </statFactors>
@@ -66,7 +68,7 @@
 
     <GeneDef ParentName="CrewmateSleepBase">
         <defName>CrewmateSleep_SmallIncrease</defName>
-        <displayOrderInCategory>4</displayOrderInCategory>
+		<iconPath>lobbygenes/sleepgenebigup</iconPath> 
         <statFactors>
             <RestFallRateFactor>1.1</RestFallRateFactor>
         </statFactors>
