@@ -11,16 +11,16 @@
             <li Class="HALI_RandomGenetics.Multi_Rand_List">
                 <geneList>
                     <li>
-                        <filler>50</filler>
+                        <filler>92</filler>
                         <genesAndWeight>
-                            <li><genes><li>Crewmate_Role_Scientist</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Angel</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Engineer</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Noisemaker</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Tracker</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Detective</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Judge</li></genes></li>
-                            <li><genes><li>Crewmate_Role_Influencer</li></genes></li>
+                            <li><genes><li>Crewmate_Role_Scientist</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Angel</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Engineer</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Noisemaker</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Tracker</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Detective</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Judge</li></genes><weight>1</weight></li>
+                            <li><genes><li>Crewmate_Role_Influencer</li></genes><weight>1</weight></li>
                         </genesAndWeight>
                     </li>
                 </geneList>
@@ -32,6 +32,9 @@
         <displayCategory>Crewmate_Role</displayCategory>
         <biostatCpx>5</biostatCpx>
         <prerequisite>Gene_Crewmate_Body</prerequisite>
+		<exclusionTags>
+		<li>Crewmate_Roles</li>
+		</exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="Crewmate_Role">
@@ -39,6 +42,7 @@
         <label>scientist</label>
         <labelShortAdj>scientist</labelShortAdj>
         <description>Carriers of this gene have the scientist role.</description>
+		<iconPath>rolegenes/gene_scientist</iconPath>
 
         <aptitudes>
             <Intellectual>4</Intellectual>
@@ -55,6 +59,7 @@
         <label>guardian angel</label>
         <labelShortAdj>angel</labelShortAdj>
         <description>Carriers of this gene have the guardian angel role.</description>
+		<iconPath>rolegenes/gene_angel</iconPath>
 
         <aptitudes>
             <Cooking>4</Cooking>
@@ -71,6 +76,7 @@
         <label>engineer</label>
         <labelShortAdj>engineer</labelShortAdj>
         <description>Carriers of this gene have the engineer role.</description>
+		<iconPath>rolegenes/gene_engineer</iconPath>
 
         <aptitudes>
             <Construction>4</Construction>
@@ -87,6 +93,7 @@
         <label>noisemaker</label>
         <labelShortAdj>noisy</labelShortAdj>
         <description>Carriers of this gene have the noisemaker role.</description>
+		<iconPath>rolegenes/gene_noisemaker</iconPath>
 
         <aptitudes>
             <Crafting>4</Crafting>
@@ -103,6 +110,7 @@
         <label>tracker</label>
         <labelShortAdj>tracker</labelShortAdj>
         <description>Carriers of this gene have the tracker role.</description>
+		<iconPath>rolegenes/gene_tracker</iconPath>
 
         <aptitudes>
             <Plants>4</Plants>
@@ -119,6 +127,7 @@
         <label>detective</label>
         <labelShortAdj>detective</labelShortAdj>
         <description>Carriers of this gene have the detective role.</description>
+		<iconPath>rolegenes/gene_detective</iconPath>
 
         <aptitudes>
             <Shooting>4</Shooting>
@@ -135,6 +144,7 @@
         <label>judge</label>
         <labelShortAdj>judge</labelShortAdj>
         <description>Carriers of this gene have the judge role.</description>
+		<iconPath>rolegenes/gene_judge</iconPath>
 
         <aptitudes>
             <Social>4</Social>
@@ -151,6 +161,7 @@
         <label>influencer</label>
         <labelShortAdj>influencer</labelShortAdj>
         <description>Carriers of this gene have the influencer role.</description>
+		<iconPath>rolegenes/gene_influencer</iconPath>
 
         <aptitudes>
             <Social>4</Social>
