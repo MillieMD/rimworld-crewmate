@@ -11,11 +11,11 @@
                 <geneList>
                     <li>
                         <genesAndWeight>
-                            <li><genes><li>CrewmateSpeed_SmallDecrease</li></genes></li>
-                            <li><genes><li>CrewmateSpeed_TinyDecrease</li></genes></li>
-                            <li><genes><li>CrewmateSpeed_NoChange</li></genes></li>
-                            <li><genes><li>CrewmateSpeed_TinyIncrease</li></genes></li>
-                            <li><genes><li>CrewmateSpeed_SmallIncrease</li></genes></li>
+                            <li><genes><li>CrewmateSpeed_SmallDecrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateSpeed_TinyDecrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateSpeed_NoChange</li></genes><weight>2</weight></li>
+                            <li><genes><li>CrewmateSpeed_TinyIncrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateSpeed_SmallIncrease</li></genes><weight>1</weight></li>
                         </genesAndWeight>
                     </li>
                 </geneList>
@@ -32,6 +32,7 @@
 
         <exclusionTags>
             <li>MoveSpeed</li>
+			<li>Crewmate_Speeds</li>
         </exclusionTags>
     </GeneDef>
 

@@ -12,11 +12,11 @@
                 <geneList>
                     <li>
                         <genesAndWeight>
-                            <li><genes><li>CrewmateVision_SmallDecrease</li></genes></li>
-                            <li><genes><li>CrewmateVision_TinyDecrease</li></genes></li>
-                            <li><genes><li>CrewmateVision_NoChange</li></genes></li>
-                            <li><genes><li>CrewmateVision_TinyIncrease</li></genes></li>
-                            <li><genes><li>CrewmateVision_SmallIncrease</li></genes></li>
+                            <li><genes><li>CrewmateVision_SmallDecrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateVision_TinyDecrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateVision_NoChange</li></genes><weight>2</weight></li>
+                            <li><genes><li>CrewmateVision_TinyIncrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateVision_SmallIncrease</li></genes><weight>1</weight></li>
                         </genesAndWeight>
                     </li>
                 </geneList>
@@ -33,6 +33,7 @@
 
         <exclusionTags>
             <li>ShootingAccuracy</li>
+			<li>Crewmate_Visions</li>
         </exclusionTags>
     </GeneDef>
 

@@ -11,11 +11,11 @@
                 <geneList>
                     <li>
                     <genesAndWeight>
-                        <li><genes><li>CrewmateSleep_SmallDecrease</li></genes></li>
-                        <li><genes><li>CrewmateSleep_TinyDecrease</li></genes></li>
-                        <li><genes><li>CrewmateSleep_NoChange</li></genes></li>
-                        <li><genes><li>CrewmateSleep_TinyIncrease</li></genes></li>
-                        <li><genes><li>CrewmateSleep_SmallIncrease</li></genes></li>
+                        <li><genes><li>CrewmateSleep_SmallDecrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateSleep_TinyDecrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateSleep_NoChange</li></genes><weight>2</weight></li>
+                        <li><genes><li>CrewmateSleep_TinyIncrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateSleep_SmallIncrease</li></genes><weight>1</weight></li>
                     </genesAndWeight>
                     </li>
                 </geneList>
@@ -30,6 +30,11 @@
         <displayCategory>Sleep</displayCategory>
 		<displayCategory>Crewmate_Lobby</displayCategory>
 		<displayOrderInCategory>3</displayOrderInCategory>
+		
+		<exclusionTags>
+		<li>Sleep</li>
+		<li>Crewmate_Sleeps</li>
+		</exclusionTags>
 
         <!-- TODO: B&S prereq crewmate race -->
     </GeneDef>

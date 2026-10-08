@@ -11,27 +11,27 @@
                 <geneList>
                     <li>
                     <genesAndWeight>
-                        <li><genes><li>Crewmate_Skin_Red</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Blue</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Green</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Pink</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Orange</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Yellow</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Black</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_White</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Purple</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Lime</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Cyan</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Brown</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Banana</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Rose</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Maroon</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Grey</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Tan</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Coral</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Fortegreen</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Olive</li></genes></li>
-                        <li><genes><li>Crewmate_Skin_Saturated_Yellow</li></genes></li>
+                        <li><genes><li>Crewmate_Skin_Red</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Blue</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Green</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Pink</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Orange</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Yellow</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Black</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_White</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Purple</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Lime</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Cyan</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Brown</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Banana</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Rose</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Maroon</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Grey</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Tan</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Coral</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Fortegreen</li></genes><weight>1</weight></li>
+                        <li><genes><li>Crewmate_Skin_Olive</li></genes><weight>3</weight></li>
+                        <li><genes><li>Crewmate_Skin_Saturated_Yellow</li></genes><weight>1</weight></li>
                     </genesAndWeight>
                     </li>
                 </geneList>

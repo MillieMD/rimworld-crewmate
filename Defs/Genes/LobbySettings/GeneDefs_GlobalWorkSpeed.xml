@@ -11,11 +11,11 @@
                 <geneList>
                     <li>
                     <genesAndWeight>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_SmallDecrease</li></genes></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyDecrease</li></genes></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_NoChange</li></genes></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyIncrease</li></genes></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_SmallIncrease</li></genes></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_SmallDecrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyDecrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_NoChange</li></genes><weight>2</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyIncrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_SmallIncrease</li></genes><weight>1</weight></li>
                     </genesAndWeight>
                     </li>
                 </geneList>
@@ -29,6 +29,10 @@
         <description>Carriers of this gene work at a crewmate speed.</description>
 		<displayCategory>Crewmate_Lobby</displayCategory>
 		<displayOrderInCategory>2</displayOrderInCategory>
+		
+		<exclusionTags>
+		<li>Crewmate_Works</li>
+		</exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="CrewmateGlobalWorkSpeedBase">

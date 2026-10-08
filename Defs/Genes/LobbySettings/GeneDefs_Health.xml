@@ -11,11 +11,11 @@
                 <geneList>
                     <li>
                         <genesAndWeight>
-                            <li><genes><li>CrewmateImmunityHealing_SmallDecrease</li></genes></li>
-                            <li><genes><li>CrewmateImmunityHealing_TinyDecrease</li></genes></li>
-                            <li><genes><li>CrewmateImmunityHealing_NoChange</li></genes></li>
-                            <li><genes><li>CrewmateImmunityHealing_TinyIncrease</li></genes></li>
-                            <li><genes><li>CrewmateImmunityHealing_SmallIncrease</li></genes></li>
+                            <li><genes><li>CrewmateImmunityHealing_SmallDecrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateImmunityHealing_TinyDecrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateImmunityHealing_NoChange</li></genes><weight>2</weight></li>
+                            <li><genes><li>CrewmateImmunityHealing_TinyIncrease</li></genes><weight>1</weight></li>
+                            <li><genes><li>CrewmateImmunityHealing_SmallIncrease</li></genes><weight>1</weight></li>
                         </genesAndWeight>
                     </li>
                 </geneList>
@@ -34,6 +34,7 @@
         <exclusionTags>
             <li>Immunity</li>
             <li>WoundHealingRate</li>
+			<li>Crewmate_Healthings</li>
         </exclusionTags>
     </GeneDef>
 
