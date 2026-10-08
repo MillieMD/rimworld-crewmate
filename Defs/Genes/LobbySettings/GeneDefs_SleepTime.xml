@@ -23,7 +23,7 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef Name="CrewmateSleepBase" Abstract="True">
+    <GeneDef Name="CrewmateSleepBase" ParentName="ForceInheritance" Abstract="True">
         <label>discussion time</label>
         <labelShortAdj>discussed</labelShortAdj>
         <description>Carriers of this gene sleep like a crewmate.</description>

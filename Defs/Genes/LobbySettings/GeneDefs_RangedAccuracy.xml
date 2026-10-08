@@ -24,7 +24,7 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef Name="CrewmateVisionBase" Abstract="True">
+    <GeneDef Name="CrewmateVisionBase" ParentName="ForceInheritance" Abstract="True">
         <label>vision</label>
         <labelShortAdj>visioned</labelShortAdj>
         <description>Carriers of this gene see how a crewmate does.</description>

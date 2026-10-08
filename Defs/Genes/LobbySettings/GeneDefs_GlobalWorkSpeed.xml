@@ -23,7 +23,7 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef Name="CrewmateGlobalWorkSpeedBase" Abstract="True">
+    <GeneDef Name="CrewmateGlobalWorkSpeedBase" ParentName="ForceInheritance" Abstract="True">
         <label>task count</label>
         <labelShortAdj>tasked</labelShortAdj>
         <description>Carriers of this gene work at a crewmate speed.</description>

@@ -39,8 +39,9 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef Name="CrewmateSkinOverride" ParentName="GeneSkinColorOverride" Abstract="True">
+    <GeneDef Name="CrewmateSkinOverride" ParentName="ForceInheritance" Abstract="True">
         <iconPath>colour</iconPath>   
+        <displayCategory>Cosmetic_Skin</displayCategory>
     </GeneDef>
 
     <!-- RED -->

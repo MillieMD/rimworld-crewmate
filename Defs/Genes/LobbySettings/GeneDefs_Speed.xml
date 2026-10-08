@@ -23,7 +23,7 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef Name="CrewmateSpeedBase" Abstract="True">
+    <GeneDef Name="CrewmateSpeedBase" ParentName="ForceInheritance" Abstract="True">
         <label>walking speed</label>
         <labelShortAdj>crew speed</labelShortAdj>
         <description>Carriers of this gene move at a crewmate speed.</description>

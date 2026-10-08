@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <GeneDef Name="ForceInheritance" Abstract="True">
+        <defName>ForceInheritance</defName>
+        <modExtensions>
+            <li Class="Crewmate.InheritanceSettings">
+                <forceActiveInheritance>true</forceActiveInheritance>
+            </li>
+        </modExtensions>
+    </GeneDef>
+</Defs>
