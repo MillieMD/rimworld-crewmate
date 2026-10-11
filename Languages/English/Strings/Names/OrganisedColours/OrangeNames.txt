@@ -14,3 +14,6 @@ Flame
 Carrot
 Terracotta
 Hotspot
+Naranja
+Oranje
+Oren

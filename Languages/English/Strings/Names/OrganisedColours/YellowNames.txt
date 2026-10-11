@@ -18,3 +18,8 @@ Canary
 Goldenrod
 Flavius
 Saturation
+Amarilla
+Gelb
+Jaune
+Geel
+Melyn

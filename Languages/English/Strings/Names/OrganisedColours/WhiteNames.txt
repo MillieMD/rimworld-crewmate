@@ -15,3 +15,8 @@ Bone
 Parchment
 Dove
 Ghost
+Blanco
+Weiß
+Blanc
+Wit
+Gwyn
