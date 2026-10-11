@@ -6,7 +6,7 @@
     <rulePack>
       <rulesStrings>
         <li>r_name->[c_word] [v_word] [c_word] [v_word] [hq]</li>
-        <li>r_name->[c_word] v_word] [c_word] [v_wordend] [hq]</li>
+        <li>r_name->[c_word] [v_word] [c_word] [v_wordend] [hq]</li>
 
         <li>hq->HQ</li>
 
