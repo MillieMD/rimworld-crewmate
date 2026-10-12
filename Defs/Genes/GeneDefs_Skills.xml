@@ -12,9 +12,6 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
 
-    <!--<passionModType>AddOneLevel</passionModType>
-    doesnt seem to work -->
-
     <statOffsets>
       <MiningSpeed>0.20</MiningSpeed>
       <MiningYield>0.10</MiningYield>
