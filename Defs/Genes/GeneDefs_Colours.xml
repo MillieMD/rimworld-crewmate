@@ -42,6 +42,9 @@
     <GeneDef Name="CrewmateSkinOverride" ParentName="ForceInheritance" Abstract="True">
         <iconPath>colour</iconPath>   
         <displayCategory>Cosmetic_Skin</displayCategory>
+		<exclusionTags>
+            <li>Crewmate_Colours</li>
+        </exclusionTags>
     </GeneDef>
 
     <!-- RED -->
