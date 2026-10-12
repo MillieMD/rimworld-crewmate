@@ -12,9 +12,9 @@
                     <li>
                     <genesAndWeight>
                         <li><genes><li>CrewmateGlobalWorkSpeed_SmallDecrease</li></genes><weight>1</weight></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyDecrease</li></genes><weight>1</weight></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_NoChange</li></genes><weight>2</weight></li>
-                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyIncrease</li></genes><weight>1</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyDecrease</li></genes><weight>2</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_NoChange</li></genes><weight>3</weight></li>
+                        <li><genes><li>CrewmateGlobalWorkSpeed_TinyIncrease</li></genes><weight>2</weight></li>
                         <li><genes><li>CrewmateGlobalWorkSpeed_SmallIncrease</li></genes><weight>1</weight></li>
                     </genesAndWeight>
                     </li>
