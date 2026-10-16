@@ -6,12 +6,8 @@ using Verse.Grammar;
 using RimWorld;
 using HarmonyLib;
 
-// #nullable enable
-
 namespace Crewmate
 {
-
-
     [StaticConstructorOnStartup]
     [HarmonyPatch]
     class CrewmatePatches
