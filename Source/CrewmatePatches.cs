@@ -12,7 +12,7 @@ namespace Crewmate
     [HarmonyPatch]
     class CrewmatePatches
     {
-        const bool LOGGING_ENABLED = false;
+        const bool LOGGING_ENABLED = true;
 
         static CrewmatePatches()
         {
@@ -197,6 +197,7 @@ namespace Crewmate
         [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] { typeof(PawnGenerationRequest) })]
         public static void Postfix(ref Pawn __result)
         {
+
             XenotypeDef xenotype = __result.genes?.Xenotype;
 
             if (!ModsConfig.BiotechActive || xenotype == null)
@@ -217,16 +218,19 @@ namespace Crewmate
             string testPawnNameSymbol = null;
             bool forceNoNick = false;
 
-            List<Rule> extraRules = getPawnColourRules(__result.genes);
+            List<Rule> extraRules = getPawnColourRules(__result.genes); 
 
             __result.Name = NameTriple.FromString(NameGenerator.GenerateName(
                 nameMaker,
-                (x => true),
+                x => true,
                 appendNumberIfNameUsed,
                 rootKeyword,
                 testPawnNameSymbol,
                 extraRules),
                 forceNoNick);
+
+            //TODO: manually set nickname to be first name
+            // __result.Name.nick = __result.Name.first
         }
 
         /// <summary>

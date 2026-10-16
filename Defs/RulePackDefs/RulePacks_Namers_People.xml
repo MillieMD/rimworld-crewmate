@@ -4,7 +4,10 @@
         <defName>NamerPersonCrewmate</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[PAWN_skincolour]</li>
+                <li>r_name->[PAWN_skincolour] [last_name]</li>
+
+                <li>PAWN_skincolour(p=0.000000000001)->[SylB][SylB][SylB]</li>
+                <li>last_name->[SylB][SylB][SylB]</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
