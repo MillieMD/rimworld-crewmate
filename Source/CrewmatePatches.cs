@@ -11,10 +11,13 @@ using HarmonyLib;
 namespace Crewmate
 {
 
+
     [StaticConstructorOnStartup]
     [HarmonyPatch]
     class CrewmatePatches
     {
+        const bool LOGGING_ENABLED = false;
+
         static CrewmatePatches()
         {
             var harmony = new Harmony("serprentino.amongus");
@@ -28,8 +31,7 @@ namespace Crewmate
         [HarmonyPatch(typeof(PregnancyUtility), "GetInheritedGenes", new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
         public static bool Prefix(Pawn father, Pawn mother, out bool success, ref List<GeneDef> __result)
         {
-
-            Log.Message("PREFIX: PregnancyUtility.GetInheritedGenes beginning...");
+            if (LOGGING_ENABLED) Log.Message("PREFIX: PregnancyUtility.GetInheritedGenes beginning...");
 
             List<GeneDef> tmpGenes = new List<GeneDef>();
             List<GeneDef> tmpGenesShuffled = new List<GeneDef>();
@@ -76,7 +78,7 @@ namespace Crewmate
                 }
             }
 
-            // TODO tmpGeneShuffled is currently full list of mother and father genes
+            // tmpGeneChances is currently full list of mother and father genes
             int geneCount = tmpGeneChances.Count;
             Dictionary<GeneDef, float>.KeyCollection keys = tmpGeneChances.Keys;
 
@@ -108,6 +110,14 @@ namespace Crewmate
                     tmpGeneChances.SetOrAdd(gene, 0f);
                 }
 
+            }
+
+            if (LOGGING_ENABLED)
+            {
+                foreach (KeyValuePair<GeneDef, float> pair in tmpGeneChances)
+                {
+                    Log.Message($"Gene: {pair.Key.defName} has a {pair.Value} chance of being added");
+                }
             }
 
             int num = 0;
@@ -168,15 +178,17 @@ namespace Crewmate
                 tmpGenes.Add(GeneDefOf.Inbred);
             }
 
-
-            Log.Message($"{tmpGenes.Count()} genes passed on");
-            Log.Message("Full gene list:");
-            foreach (GeneDef gene in tmpGenes)
+            if (LOGGING_ENABLED)
             {
-                Log.Message(gene.defName);
-            }
+                Log.Message($"{tmpGenes.Count()} genes passed on");
+                Log.Message("Inherited gene list:");
+                foreach (GeneDef gene in tmpGenes)
+                {
+                    Log.Message(gene.defName);
+                }
 
-            Log.Message("PREFIX: PregnancyUtility.GetInheritedGenes finishing...");
+                Log.Message("PREFIX: PregnancyUtility.GetInheritedGenes finishing...");
+            }
 
             __result = tmpGenes;
             return false;
@@ -186,20 +198,20 @@ namespace Crewmate
         /// Rename a generated pawn if they have the crewmate xenotype
         /// </summary>
         /// <param name="__result"></param>
-        [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] {typeof(PawnGenerationRequest)})]
-        public static void Postfix(ref Pawn __result){
-
+        [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] { typeof(PawnGenerationRequest) })]
+        public static void Postfix(ref Pawn __result)
+        {
             XenotypeDef xenotype = __result.genes?.Xenotype;
 
-            if(!ModsConfig.BiotechActive || xenotype == null)
+            if (!ModsConfig.BiotechActive || xenotype == null)
             {
-                Log.Message("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                if(LOGGING_ENABLED) Log.Message("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
                 return;
             }
 
-            if(xenotype.defName != "Crewmate")
+            if (xenotype.defName != "Crewmate")
             {
-                Log.Message("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                if(LOGGING_ENABLED) Log.Message("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
                 return;
             }
 
@@ -212,14 +224,13 @@ namespace Crewmate
             List<Rule> extraRules = getPawnColourRules(__result.genes);
 
             __result.Name = NameTriple.FromString(NameGenerator.GenerateName(
-                nameMaker, 
-                (Predicate<string>)(x => !NameTriple.FromString(x).UsedThisGame), 
-                appendNumberIfNameUsed, 
-                rootKeyword, 
-                testPawnNameSymbol, 
-                extraRules), 
+                nameMaker,
+                (x => true),
+                appendNumberIfNameUsed,
+                rootKeyword,
+                testPawnNameSymbol,
+                extraRules),
                 forceNoNick);
-
         }
 
         /// <summary>
@@ -228,34 +239,36 @@ namespace Crewmate
         /// <returns> List of a single Rule_File which has loaded the relevant ColourName.txt strings. Returns an empty List if no Crewmate_Skin_ gene present</returns>
         private static List<Rule> getPawnColourRules(Pawn_GeneTracker genes)
         {
-            
             List<Rule> extraRules = new List<Rule>();
 
             foreach (Gene gene in genes.Endogenes)
             {
 
-                if(gene.def.defName.Contains("Crewmate_Skin_"))
+                if (gene.def.defName.Contains("Crewmate_Skin_"))
                 {
                     string colourName = gene.def.defName.Split("Crewmate_Skin_")[1];
+
+                    // Colour variations use base colour file
+                    if (colourName == "Saturated_Yellow") colourName = "Yellow";
+                    if (colourName == "Fortegreen") colourName = "Green";
 
                     Rule_File rule = new Rule_File
                     {
                         keyword = "PAWN_skincolour",
                         path = $"Names/OrganisedColours/{colourName}Names"
                     };
+
                     // Forces rule to read strings from file, otherwise the rule is unresolvable
-                    rule.Init(); 
+                    rule.Init();
 
                     extraRules.Add(rule);
 
-                    Log.Message($"Added rule: {rule.keyword}->{rule.path}");
-                    Log.Message(rule.ToString());
+                    if(LOGGING_ENABLED) Log.Message($"Added rule: {rule.keyword}->{rule.path}");
+                    if(LOGGING_ENABLED) Log.Message(rule.ToString());
                 }
             }
 
             return extraRules;
         }
-
     }
-
 }

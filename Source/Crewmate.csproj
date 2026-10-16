@@ -9,6 +9,9 @@
     
     <RootNamespace>Crewmate</RootNamespace>
     <AssemblyName>Crewmate</AssemblyName>
+
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
     
   </PropertyGroup>
 
