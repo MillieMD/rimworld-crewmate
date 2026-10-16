@@ -2,25 +2,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
+using Verse.Grammar;
 using RimWorld;
 using HarmonyLib;
+
+// #nullable enable
 
 namespace Crewmate
 {
 
     [StaticConstructorOnStartup]
-    // [HarmonyPatch(typeof(PregnancyUtility), nameof(PregnancyUtility.GetInheritedGenes))]
-    [HarmonyPatch(typeof(PregnancyUtility), "GetInheritedGenes", new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
-    class CrewmateInheritancePatch
+    [HarmonyPatch]
+    class CrewmatePatches
     {
-
-        static CrewmateInheritancePatch()
+        static CrewmatePatches()
         {
             var harmony = new Harmony("serprentino.amongus");
-            Log.Message("CrewmateInheritancePatch initialised");
+            Log.Message("CrewmatePatches initialised");
             harmony.PatchAll();
         }
 
+        /// <summary>
+        /// Force inheritance of a gene where it is active on either the mother or the father, if forceActiveInheritance is enabled
+        /// </summary>
+        [HarmonyPatch(typeof(PregnancyUtility), "GetInheritedGenes", new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
         public static bool Prefix(Pawn father, Pawn mother, out bool success, ref List<GeneDef> __result)
         {
 
@@ -91,7 +96,7 @@ namespace Crewmate
                 {
                     continue;
                 }
-                
+
                 bool isActive = mother.genes.HasActiveGene(gene) || father.genes.HasActiveGene(gene);
 
                 if (isActive)
@@ -176,6 +181,81 @@ namespace Crewmate
             __result = tmpGenes;
             return false;
         }
+
+        /// <summary>
+        /// Rename a generated pawn if they have the crewmate xenotype
+        /// </summary>
+        /// <param name="__result"></param>
+        [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] {typeof(PawnGenerationRequest)})]
+        public static void Postfix(ref Pawn __result){
+
+            XenotypeDef xenotype = __result.genes?.Xenotype;
+
+            if(!ModsConfig.BiotechActive || xenotype == null)
+            {
+                Log.Message("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                return;
+            }
+
+            if(xenotype.defName != "Crewmate")
+            {
+                Log.Message("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                return;
+            }
+
+            RulePackDef nameMaker = xenotype.GetNameMaker(__result.gender);
+            bool appendNumberIfNameUsed = false;
+            string rootKeyword = null;
+            string testPawnNameSymbol = null;
+            bool forceNoNick = false;
+
+            List<Rule> extraRules = getPawnColourRules(__result.genes);
+
+            __result.Name = NameTriple.FromString(NameGenerator.GenerateName(
+                nameMaker, 
+                (Predicate<string>)(x => !NameTriple.FromString(x).UsedThisGame), 
+                appendNumberIfNameUsed, 
+                rootKeyword, 
+                testPawnNameSymbol, 
+                extraRules), 
+                forceNoNick);
+
+        }
+
+        /// <summary>
+        /// Generate the Rule_File that corresponds to a Pawn's Crewmate_Skin_ genes.
+        /// </summary>
+        /// <returns> List of a single Rule_File which has loaded the relevant ColourName.txt strings. Returns an empty List if no Crewmate_Skin_ gene present</returns>
+        private static List<Rule> getPawnColourRules(Pawn_GeneTracker genes)
+        {
+            
+            List<Rule> extraRules = new List<Rule>();
+
+            foreach (Gene gene in genes.Endogenes)
+            {
+
+                if(gene.def.defName.Contains("Crewmate_Skin_"))
+                {
+                    string colourName = gene.def.defName.Split("Crewmate_Skin_")[1];
+
+                    Rule_File rule = new Rule_File
+                    {
+                        keyword = "PAWN_skincolour",
+                        path = $"Names/OrganisedColours/{colourName}Names"
+                    };
+                    // Forces rule to read strings from file, otherwise the rule is unresolvable
+                    rule.Init(); 
+
+                    extraRules.Add(rule);
+
+                    Log.Message($"Added rule: {rule.keyword}->{rule.path}");
+                    Log.Message(rule.ToString());
+                }
+            }
+
+            return extraRules;
+        }
+
     }
 
 }

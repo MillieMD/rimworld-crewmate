@@ -23,7 +23,7 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef Name="CrewmateImmunityHealingBase" ParentName="ForceInheritance">
+    <GeneDef Name="CrewmateImmunityHealingBase" ParentName="ForceInheritance" Abstract="True">
         <label>voting time</label>
         <labelShortAdj>voted</labelShortAdj>
         <description>Carriers of this gene gain immunity and heal like a crewmate.</description>
