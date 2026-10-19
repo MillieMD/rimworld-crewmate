@@ -6,8 +6,16 @@
             <rulesStrings>
                 <li>r_name->[PAWN_skincolour] [last_name]</li>
 
-                <li>PAWN_skincolour(p=0.000000000001)->[SylB][SylB][SylB]</li>
-                <li>last_name->[SylB][SylB][SylB]</li>
+				<!-- Temporary first name generator used when the vanilla name function is run in order to not throw an error.
+				Uses three random syllables instead of something like "placeholder" so that the game doesn't complain about generating a name that it thinks is already in use.
+				After the C# with the colour-based namer has run, this rule still exists so it has been given an extremely low probability of rolling to minimise the chance the player sees it. -->
+                <li>PAWN_skincolour(p=0.000000000001)->[SylB][SylB][SylB]</li>	
+				
+				<!-- Last name generators, slightly less likely chance for 4-part name. 
+				Technically this generates twice but it makes no difference to the final outcome. -->
+                <li>last_name(p=2)->[SylB][SylB][SylB]</li>
+				<li>last_name(p=2)->[SylB][SylB]</li>
+				<li>last_name(p=0.5)->[SylB][SylB][SylB][SylB]</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
