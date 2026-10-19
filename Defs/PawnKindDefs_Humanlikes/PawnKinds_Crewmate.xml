@@ -3,11 +3,15 @@
 
 <!-- Pawn kinds are presets for world pawns, need to consider what "archetypes" are needed, or if we just want 1 generic -->
 
-  <PawnKindDef>
-    <defName>Crewmate</defName>
-    <label>crewmate</label>
-    <race>Human</race>
+  <PawnKindDef Name="BaseCrewmate" Abstract="True">
     <defaultFactionDef>Crewmate_Faction</defaultFactionDef>
+    <label>crewmate</label>
+    <race>Crewmate</race>
+    <defaultFactionDef>Crewmate_Faction</defaultFactionDef>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseCrewmate">
+    <defName>Crewmate</defName>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <combatPower>1</combatPower>
@@ -26,12 +30,10 @@
     <initialResistanceRange>1~3</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef>
+  <PawnKindDef ParentName="BaseCrewmate">
     <defName>Crewmate_Leader</defName>
     <label>crewmate captain</label>
-    <race>Human</race>
-    <defaultFactionDef>Crewmate_Faction</defaultFactionDef>
-	<factionLeader>true</factionLeader>
+	  <factionLeader>true</factionLeader>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <combatPower>1</combatPower>

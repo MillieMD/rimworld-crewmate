@@ -32,7 +32,7 @@
       <li>Crewmate_Sleep</li>
 
       <li>StrongStomach</li>
-      <li>VacuumWeakness</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">VacuumWeakness</li>
       <li>MaxTemp_SmallDecrease</li>
       <li>MeleeDamage_Weak</li>
       <li>AptitudeStrong_Crafting</li>

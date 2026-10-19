@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
       <!-- Crewmates are extra weak to the vacuum  -->
-  <GeneDef>
+  <GeneDef MayRequire="Ludeon.RimWorld.Odyssey">
     <defName>VacuumWeakness</defName>
     <label>vacuum weak</label>
     <labelShortAdj>vacuum-weak</labelShortAdj>
@@ -15,7 +15,7 @@
       <li>VacuumResistance_Partial</li>
     </exclusionTags>
     <immuneToVacuumBurns>false</immuneToVacuumBurns>
-    <displayCategory MayRequire="Ludeon.RimWorld.Biotech">ResistanceAndWeakness</displayCategory>
+    <displayCategory>ResistanceAndWeakness</displayCategory>
     <statOffsets>
       <VacuumResistance>-0.3</VacuumResistance>
     </statOffsets>

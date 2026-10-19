@@ -12,7 +12,7 @@ namespace Crewmate
     [HarmonyPatch]
     class CrewmatePatches
     {
-        const bool LOGGING_ENABLED = true;
+        const bool LOGGING_ENABLED = false;
 
         static CrewmatePatches()
         {
