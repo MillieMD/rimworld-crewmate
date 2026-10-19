@@ -191,9 +191,8 @@ namespace Crewmate
         }
 
         /// <summary>
-        /// Rename a generated pawn if they have the crewmate xenotype
+        /// Rename a generated pawn (not babies) if they have the crewmate xenotype.
         /// </summary>
-        /// <param name="__result"></param>
         [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] { typeof(PawnGenerationRequest) })]
         public static void Postfix(ref Pawn __result)
         {
@@ -212,15 +211,49 @@ namespace Crewmate
                 return;
             }
 
-            RulePackDef nameMaker = xenotype.GetNameMaker(__result.gender);
+            // Force nick name to be the same as the first name
+            __result.Name = generateCrewmateName(__result);
+        }
+
+        /// <summary>
+        /// Prefix pawn name generation to inject Crewmate colour naming rules.
+        /// </summary>
+        [HarmonyPatch(typeof(PawnBioAndNameGenerator), nameof(PawnBioAndNameGenerator.GeneratePawnName))]
+        public static bool Prefix(ref Pawn pawn, ref Name __result)
+        {
+            
+            XenotypeDef xenotype = pawn.genes?.Xenotype;
+
+            if (!ModsConfig.BiotechActive || xenotype == null)
+            {
+                if(LOGGING_ENABLED) Log.Message("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                return true;
+            }
+
+            if (xenotype.defName != "Crewmate")
+            {
+                if(LOGGING_ENABLED) Log.Message("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                if(LOGGING_ENABLED) Log.Message($"Pawn xenotype: {xenotype.defName}");
+                return true;
+            }
+
+            __result = generateCrewmateName(pawn);
+            return false;
+        }
+
+        private static Name generateCrewmateName(Pawn pawn)
+        {
+            XenotypeDef xenotype = pawn.genes.Xenotype;
+
+            RulePackDef nameMaker = xenotype.GetNameMaker(pawn.gender);
             bool appendNumberIfNameUsed = false;
             string rootKeyword = null;
             string testPawnNameSymbol = null;
             bool forceNoNick = false;
 
-            List<Rule> extraRules = getPawnColourRules(__result.genes); 
+            List<Rule> extraRules = getPawnColourRules(pawn.genes); 
 
-            __result.Name = NameTriple.FromString(NameGenerator.GenerateName(
+            NameTriple name = NameTriple.FromString(NameGenerator.GenerateName(
                 nameMaker,
                 x => true,
                 appendNumberIfNameUsed,
@@ -229,14 +262,14 @@ namespace Crewmate
                 extraRules),
                 forceNoNick);
 
-            //TODO: manually set nickname to be first name
-            // __result.Name.nick = __result.Name.first
+            // Force nick name to be the same as the first name
+            return new NameTriple(name.First, name.First, name.Last);
         }
 
         /// <summary>
         /// Generate the Rule_File that corresponds to a Pawn's Crewmate_Skin_ genes.
         /// </summary>
-        /// <returns> List of a single Rule_File which has loaded the relevant ColourName.txt strings. Returns an empty List if no Crewmate_Skin_ gene present</returns>
+        /// <returns> List of a Rules with relevant ColourName.txt strings loaded. Empty List if no Crewmate_Skin_ gene present</returns>
         private static List<Rule> getPawnColourRules(Pawn_GeneTracker genes)
         {
             List<Rule> extraRules = new List<Rule>();
@@ -265,6 +298,7 @@ namespace Crewmate
 
                     if(LOGGING_ENABLED) Log.Message($"Added rule: {rule.keyword}->{rule.path}");
                     if(LOGGING_ENABLED) Log.Message(rule.ToString());
+
                 }
             }
 
