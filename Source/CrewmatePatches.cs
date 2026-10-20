@@ -5,6 +5,7 @@ using Verse;
 using Verse.Grammar;
 using RimWorld;
 using HarmonyLib;
+using System.Diagnostics;
 
 namespace Crewmate
 {
@@ -12,12 +13,10 @@ namespace Crewmate
     [HarmonyPatch]
     class CrewmatePatches
     {
-        const bool LOGGING_ENABLED = false;
-
         static CrewmatePatches()
         {
             var harmony = new Harmony("serprentino.amongus");
-            Log.Message("CrewmatePatches initialised");
+            Debug("CrewmatePatches initialised");
             harmony.PatchAll();
         }
 
@@ -27,7 +26,7 @@ namespace Crewmate
         [HarmonyPatch(typeof(PregnancyUtility), "GetInheritedGenes", new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
         public static bool Prefix(Pawn father, Pawn mother, out bool success, ref List<GeneDef> __result)
         {
-            if (LOGGING_ENABLED) Log.Message("PREFIX: PregnancyUtility.GetInheritedGenes beginning...");
+            Debug("PREFIX: PregnancyUtility.GetInheritedGenes beginning...");
 
             List<GeneDef> tmpGenes = new List<GeneDef>();
             List<GeneDef> tmpGenesShuffled = new List<GeneDef>();
@@ -108,12 +107,10 @@ namespace Crewmate
 
             }
 
-            if (LOGGING_ENABLED)
+
+            foreach (KeyValuePair<GeneDef, float> pair in tmpGeneChances)
             {
-                foreach (KeyValuePair<GeneDef, float> pair in tmpGeneChances)
-                {
-                    Log.Message($"Gene: {pair.Key.defName} has a {pair.Value} chance of being added");
-                }
+                Debug($"Gene: {pair.Key.defName} has a {pair.Value} chance of being added");
             }
 
             int num = 0;
@@ -174,17 +171,15 @@ namespace Crewmate
                 tmpGenes.Add(GeneDefOf.Inbred);
             }
 
-            if (LOGGING_ENABLED)
+            Debug($"{tmpGenes.Count()} genes passed on");
+            Debug("Inherited gene list:");
+            foreach (GeneDef gene in tmpGenes)
             {
-                Log.Message($"{tmpGenes.Count()} genes passed on");
-                Log.Message("Inherited gene list:");
-                foreach (GeneDef gene in tmpGenes)
-                {
-                    Log.Message(gene.defName);
-                }
-
-                Log.Message("PREFIX: PregnancyUtility.GetInheritedGenes finishing...");
+                Debug(gene.defName);
             }
+
+            Debug("PREFIX: PregnancyUtility.GetInheritedGenes finishing...");
+            
 
             __result = tmpGenes;
             return false;
@@ -201,13 +196,13 @@ namespace Crewmate
 
             if (!ModsConfig.BiotechActive || xenotype == null)
             {
-                if(LOGGING_ENABLED) Log.Message("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                Debug("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
                 return;
             }
 
             if (xenotype.defName != "Crewmate")
             {
-                if(LOGGING_ENABLED) Log.Message("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                Debug("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
                 return;
             }
 
@@ -226,14 +221,14 @@ namespace Crewmate
 
             if (!ModsConfig.BiotechActive || xenotype == null)
             {
-                if(LOGGING_ENABLED) Log.Message("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                Debug("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
                 return true;
             }
 
             if (xenotype.defName != "Crewmate")
             {
-                if(LOGGING_ENABLED) Log.Message("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
-                if(LOGGING_ENABLED) Log.Message($"Pawn xenotype: {xenotype.defName}");
+                Debug("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
+                Debug($"Pawn xenotype: {xenotype.defName}");
                 return true;
             }
 
@@ -296,13 +291,19 @@ namespace Crewmate
 
                     extraRules.Add(rule);
 
-                    if(LOGGING_ENABLED) Log.Message($"Added rule: {rule.keyword}->{rule.path}");
-                    if(LOGGING_ENABLED) Log.Message(rule.ToString());
+                    Debug($"Added rule: {rule.keyword}->{rule.path}");
+                    Debug(rule.ToString());
 
                 }
             }
 
             return extraRules;
+        }
+    
+        [Conditional("DEBUG")]
+        private static void Debug(string message)
+        {
+            Log.Message(message);
         }
     }
 }

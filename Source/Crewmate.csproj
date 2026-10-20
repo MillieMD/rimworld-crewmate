@@ -2,19 +2,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Authors>authors</Authors>
-    
+
     <TargetFramework>net48</TargetFramework>
-    
-    <OutDir>..\Assemblies\</OutDir> 
-    
+
     <RootNamespace>Crewmate</RootNamespace>
     <AssemblyName>Crewmate</AssemblyName>
 
+  </PropertyGroup>
+  
+  <!-- Define Debug and Release build settings -->
+  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutDir>..\Assemblies\debug\</OutDir>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutDir>..\Assemblies\</OutDir>
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
-    
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
+  <!-- Dependencies -->
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.6.4566</Version>

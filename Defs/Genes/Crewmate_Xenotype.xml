@@ -55,6 +55,10 @@
       <li>AptitudeStrong_Shooting</li>
       <li>XenogermReimplanter</li>
     </genes>
+    <!-- Impostors always spawn as a crewmate -->
+    <doubleXenotypeChances>
+      <Crewmate>1.0</Crewmate>
+    </doubleXenotypeChances>
   </XenotypeDef>
 
 </Defs>
