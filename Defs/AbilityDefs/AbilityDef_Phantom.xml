@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <AbilityDef>
+    <defName>PhantomInvisibility</defName>
+    <label>invisibility</label>
+    <description>Psychically manipulate the visual centers of everyone nearby, rendering them unable to perceive a particular individual for a short time.</description>
+    <iconPath>UI/Abilities/Invisibility</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <hotKey>Misc12</hotKey>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <warmupTime>1</warmupTime>
+      <range>19.9</range>
+      <onlyManualCast>True</onlyManualCast>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicInvisibility</hediffDef>
+        <psychic>true</psychic>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <XenotypeDef>
+        <defName>Impostor</defName>
+        <label>impostor</label>
+        <description>TODO</description>
+        <descriptionShort>TODO</descriptionShort>
+        <iconPath>UI/Icons/Xenotypes/Custom/CustomXenotypeIcon10</iconPath>
+        <inheritable>false</inheritable>
+        <combatPowerFactor>1.0</combatPowerFactor>
+        <nameMaker>NamerPersonCrewmate</nameMaker>
+        <chanceToUseNameMaker>1</chanceToUseNameMaker>
+        <genes>
+            <li>XenogermReimplanter</li>
+            <li>Impostor_Role</li>
+            <li>ImpostorVent</li>
+
+            <li>DarkVision</li>
+            <li>LowSleep</li>
+            <li>UVSensitivity_Mild</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey">MoveSpeed_Space</li>
+            
+            <li>Pain_Reduced</li>
+            <li>KillThirst</li>
+            <li>Aggression_HyperAggressive</li>
+            <li>MeleeDamage_Strong</li>
+            <li>AptitudeStrong_Melee</li>
+            <li>AptitudeStrong_Shooting</li>
+        </genes>
+
+        <!-- Generated Impostors always spawn as a Crewmate -->
+        <doubleXenotypeChances>
+            <Crewmate>1.0</Crewmate>
+        </doubleXenotypeChances>
+    </XenotypeDef>
+</Defs>

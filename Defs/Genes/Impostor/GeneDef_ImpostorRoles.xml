@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+
+    <GeneDef ParentName="HALI_RandomGeneticsBase">
+        <defName>Impostor_Role</defName>
+        <label>impostor role</label>
+        <labelShortAdj>employed</labelShortAdj>
+        <description> Carriers of this gene may have a random impostor role.</description>
+
+        <modExtensions>
+            <li Class="HALI_RandomGenetics.Multi_Rand_List">
+                <geneList>
+                    <li>
+                        <filler>30</filler>
+                        <genesAndWeight>
+                            <li>
+                                <genes>
+                                    <li>Impostor_Role_Shapeshifter</li>
+                                </genes>
+                                <weight>1</weight>
+                            </li>
+                            <li>
+                                <genes>
+                                    <li>Impostor_Role_Phantom</li>
+                                </genes>
+                                <weight>1</weight>
+                            </li>
+                            <li>
+                                <genes>
+                                    <li>Impostor_Role_Viper</li>
+                                </genes>
+                                <weight>1</weight>
+                            </li>
+                        </genesAndWeight>
+                    </li>
+                </geneList>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef Name="Impostor_Role" Abstract="True">
+        <displayCategory>Crewmate_Role</displayCategory>
+        <biostatCpx>5</biostatCpx>
+        <biostatArc>1</biostatArc>
+        <exclusionTags>
+            <li>Impostor_Role</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="Impostor_Role">
+        <defName>Impostor_Role_Shapeshifter</defName>
+        <label>shapeshifter</label>
+        <labelShortAdj>shifting</labelShortAdj>
+        <description>Carriers of this gene have the shapeshifter role.</description>
+        <iconPath>rolegenes/gene_shapeshifter</iconPath>
+        <abilities>
+            <li>Heatspikes</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>Heatspikes</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="Impostor_Role">
+        <defName>Impostor_Role_Phantom</defName>
+        <label>phantom</label>
+        <labelShortAdj>dissolving</labelShortAdj>
+        <description>Carriers of this gene have the phantom role.</description>
+        <iconPath>rolegenes/gene_phantom</iconPath>
+        <abilities>
+            <li>PhantomInvisibility</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>PhantomInvisibility</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+    
+    <GeneDef ParentName="Impostor_Role">
+        <defName>Impostor_Role_Viper</defName>
+        <label>viper</label>
+        <labelShortAdj>dissolving</labelShortAdj>
+        <description>Carriers of this gene have the viper role.</description>
+        <iconPath>rolegenes/gene_viper</iconPath>
+        <abilities>
+            <li>AcidSpray</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>AcidSpray</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>
