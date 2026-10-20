@@ -13,30 +13,33 @@
     <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
       <!-- Cosmetic -->
-      <li>Gene_Crewmate_Body</li>
-      <li>Crewmate_Backpack</li>
+      <li>Gene_Crewmate_Body</li> <!-- We made this one -->
+      <li>Crewmate_Backpack</li> <!-- We made this one -->
       <li>Hair_BaldOnly</li>
       <li>Beard_NoBeardOnly</li>
 
       
       <!-- Colours -->
-      <li>Crewmate_Colour</li>
+      <li>Crewmate_Colour</li> <!-- We made this one -->
       
-      <li>Crewmate_Role</li>
+	  <!-- Chance for a Role -->
+      <li>Crewmate_Role</li> <!-- We made this one -->
       
-      <!-- Lobby Settings -->
+      <!-- Lobby Settings; we made all of these -->
       <li>Crewmate_Speed</li>
       <li>Crewmate_Vision</li>
       <li>Crewmate_GlobalWorkSpeed</li>
       <li>Crewmate_ImmunityHealing</li>
       <li>Crewmate_Sleep</li>
 
+      <!-- Components -->
       <li>StrongStomach</li>
-      <li MayRequire="Ludeon.RimWorld.Odyssey">VacuumWeakness</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">VacuumWeakness</li> <!-- We made this one -->
       <li>MaxTemp_SmallDecrease</li>
       <li>MeleeDamage_Weak</li>
       <li>AptitudeStrong_Crafting</li>
-      <li>BetterMining</li>
+      <li>BetterMining</li> <!-- We made this one -->  
+	  <li>ToxicEnvironmentResistance_Partial</li>
     </genes>
   </XenotypeDef>
 
