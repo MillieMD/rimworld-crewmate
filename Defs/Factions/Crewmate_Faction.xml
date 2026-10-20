@@ -6,9 +6,10 @@
         <description>TODO</description>
         <pawnSingular>crewmate</pawnSingular>
         <pawnsPlural>crewmates</pawnsPlural>
+        <factionNameMaker>NamerFactionCrewmate</factionNameMaker>
+        <settlementNameMaker>NamerSettlementCrewmate</settlementNameMaker>
         <leaderTitle>captain</leaderTitle>
         <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
-
         <fixedLeaderKinds>
             <li>Crewmate_Leader</li>
         </fixedLeaderKinds>
@@ -18,19 +19,20 @@
         <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
         <configurationListOrderPriority>50</configurationListOrderPriority>
 
-        <canStageAttacks>false</canStageAttacks>
-
-        <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
-        <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
         <colorSpectrum>
             <li>(0,0,0)</li>
             <li>(1,1,1)</li>
         </colorSpectrum>
 
-        <factionNameMaker>NamerFactionCrewmate</factionNameMaker>
-        <settlementNameMaker>NamerSettlementCrewmate</settlementNameMaker>
-
         <techLevel>Spacer</techLevel>
+
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <Crewmate>1.0</Crewmate>
+            </xenotypeChances>
+        </xenotypeSet>
 
         <backstoryFilters>
             <li>
@@ -40,11 +42,30 @@
             </li>
         </backstoryFilters>
 
-        <xenotypeSet Inherit="False">
-            <xenotypeChances>
-                <Crewmate>1.0</Crewmate>
-            </xenotypeChances>
-        </xenotypeSet>
+        <disallowedMemes MayRequire="Ludeon.RimWorld.Ideology">
+            <li>PainIsVirtue</li>
+            <li>Supremacist</li>
+            <li>Raider</li>
+            <li>Cannibal</li>
+            <li>Blindsight</li> <!-- Causes eye weirdness -->
+            <li MayRequire="Ludeon.RimWorld.Anomaly">Inhuman</li>
+        </disallowedMemes>
+
+        <!-- Traders - see TraderKindDefs -->
+        <baseTraderKinds>
+            <li>Base_Outlander_Standard</li>
+        </baseTraderKinds>
+        <caravanTraderKinds>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_Exotic</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <orbitalTraderKinds>
+            <li>Orbital_BulkGoods</li>
+            <li>Orbital_Exotic</li>
+        </orbitalTraderKinds>
 
         <maxPawnCostPerTotalPointsCurve>
             <points>
@@ -56,11 +77,30 @@
             </points>
         </maxPawnCostPerTotalPointsCurve>
 
+        <canStageAttacks>false</canStageAttacks>
         <pawnGroupMakers>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Town_Trader>1</Town_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <Villager>3</Villager>
+                    <Town_Guard>5</Town_Guard>
+                </guards>
+            </li>
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
                     <Crewmate_Leader>1</Crewmate_Leader>
+                    <Town_Guard>10</Town_Guard>
+                    <Villager>10</Villager>
                 </options>
             </li>
         </pawnGroupMakers>

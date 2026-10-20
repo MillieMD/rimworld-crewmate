@@ -1,55 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-<!-- Pawn kinds are presets for world pawns, need to consider what "archetypes" are needed, or if we just want 1 generic -->
-
   <PawnKindDef Name="BaseCrewmate" Abstract="True">
     <defaultFactionDef>Crewmate_Faction</defaultFactionDef>
     <label>crewmate</label>
     <race>Crewmate</race>
     <defaultFactionDef>Crewmate_Faction</defaultFactionDef>
+
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+
+    <techHediffsChance>0.40</techHediffsChance>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>9~15</initialResistanceRange>
   </PawnKindDef>
 
   <PawnKindDef ParentName="BaseCrewmate">
-    <defName>Crewmate</defName>
-    <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
-    <chemicalAddictionChance>0.05</chemicalAddictionChance>
-    <combatPower>1</combatPower>
-    <apparelMoney>0</apparelMoney>
-    <apparelTags>
-      <li>IndustrialBasic</li>
-    </apparelTags>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <techHediffsMoney>2000~3000</techHediffsMoney>
-    <techHediffsTags>
-      <li>Advanced</li>
-      <li>AdvancedWeapon</li>
-    </techHediffsTags>
-    <techHediffsChance>0.40</techHediffsChance>
-    <initialWillRange>0</initialWillRange>
-    <initialResistanceRange>1~3</initialResistanceRange>
-  </PawnKindDef>
-  
-  <PawnKindDef ParentName="BaseCrewmate">
     <defName>Crewmate_Leader</defName>
     <label>crewmate captain</label>
-	  <factionLeader>true</factionLeader>
+    <factionLeader>true</factionLeader>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <combatPower>1</combatPower>
-    <apparelMoney>0</apparelMoney>
-    <apparelTags>
-      <li>IndustrialBasic</li>
-    </apparelTags>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelMoney>1000~1500</apparelMoney>
+
     <techHediffsMoney>2000~3000</techHediffsMoney>
-    <techHediffsTags>
-      <li>Advanced</li>
-      <li>AdvancedWeapon</li>
-    </techHediffsTags>
-    <techHediffsChance>0.40</techHediffsChance>
-    <initialWillRange>0</initialWillRange>
-    <initialResistanceRange>1~3</initialResistanceRange>
+
+    <initialResistanceRange>12~17</initialResistanceRange>
   </PawnKindDef>
 
 </Defs>
