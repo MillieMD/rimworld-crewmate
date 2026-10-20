@@ -2,9 +2,6 @@
 
 ## Build instructions
 
-Requirements: dotnet
-
-1. `cd Source`
-2. Run `dotnet build`
+`dotnet build Source -c "Release`, or `dotnet build Source -c "Debug"` to enable logging
 
 .dlls will be created in the `Assemblies` folder
