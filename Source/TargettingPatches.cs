@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace Crewmate
 {
     /// <summary>
-    /// Patches for Impostor ability targetting
+    /// Enable mpostor ability targetting
     /// </summary>
     [HarmonyPatch]
     class TargettingPatches

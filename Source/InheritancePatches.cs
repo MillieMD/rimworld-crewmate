@@ -20,7 +20,7 @@ namespace Crewmate
     }
 
     /// <summary>
-    /// Patches to prevent exponential inheritance of Crewmate lobby genes
+    /// Prevent exponential inheritance of Crewmate lobby genes
     /// </summary>
     [HarmonyPatch]
     class InheritancePatches

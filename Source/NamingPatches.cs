@@ -8,7 +8,7 @@ using HarmonyLib;
 namespace Crewmate
 {
     /// <summary>
-    /// Patches to the PawnGenerator.GeneratePawn method to enable Crewmates to have names based on their colours
+    /// Enable Crewmates to have names based on their colours
     /// </summary>
     [HarmonyPatch]
     class NamingPatches
@@ -39,7 +39,7 @@ namespace Crewmate
         }
 
         /// <summary>
-        /// Prefix pawn name generation to inject Crewmate colour naming rules.
+        /// Inject Crewmate colour naming rules if the pawn is a crewmate. Spawned pawns' genes are activated after their name is generated, so this does not apply to all pawns.
         /// </summary>
         [HarmonyPatch(typeof(PawnBioAndNameGenerator), nameof(PawnBioAndNameGenerator.GeneratePawnName))]
         public static bool Prefix(ref Pawn pawn, ref Name __result)
