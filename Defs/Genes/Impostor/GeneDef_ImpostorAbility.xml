@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Defs>
     <GeneDef>
-        <defName>ImpostorVent</defName>
+        <defName>Impostor_Vent</defName>
         <label>vent</label>
         <description></description>
         <iconPath>UI/Icons/Genes/Gene_AcidSpray</iconPath>
         <displayCategory>Ability</displayCategory>
         <marketValueFactor>1.5</marketValueFactor>
         <abilities>
-            <li>Skip</li>
+            <li>Vent</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>Skip</AbilityDef>
+            <AbilityDef>Vent</AbilityDef>
         </descriptionHyperlinks>
         <biostatMet>-2</biostatMet>
     </GeneDef>

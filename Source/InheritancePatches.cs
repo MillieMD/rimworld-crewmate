@@ -2,31 +2,36 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
-using Verse.Grammar;
 using RimWorld;
 using HarmonyLib;
-using System.Diagnostics;
 
 namespace Crewmate
 {
-    [StaticConstructorOnStartup]
-    [HarmonyPatch]
-    class CrewmatePatches
+    /// <summary> 
+    /// Additional settings for inheritance. 
+    /// </summary>
+    public class InheritanceSettings : DefModExtension
     {
-        static CrewmatePatches()
-        {
-            var harmony = new Harmony("serprentino.amongus");
-            Debug("CrewmatePatches initialised");
-            harmony.PatchAll();
-        }
-
         /// <summary>
-        /// Force inheritance of a gene where it is active on either the mother or the father, if forceActiveInheritance is enabled
+        /// Forces 100% inheritance rate of gene is an active gene of atleast one parent, otherwise do not inherit at all
+        /// </summary>
+        public bool forceActiveInheritance = false;
+
+    }
+
+    /// <summary>
+    /// Patches to prevent exponential inheritance of Crewmate lobby genes
+    /// </summary>
+    [HarmonyPatch]
+    class InheritancePatches
+    {
+        /// <summary>
+        /// Where forceActiveInheritance is active, guarantee a gene is passed down if it is active on at least one parent.
         /// </summary>
         [HarmonyPatch(typeof(PregnancyUtility), "GetInheritedGenes", new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
         public static bool Prefix(Pawn father, Pawn mother, out bool success, ref List<GeneDef> __result)
         {
-            Debug("PREFIX: PregnancyUtility.GetInheritedGenes beginning...");
+            Crewmate.Debug("PREFIX: PregnancyUtility.GetInheritedGenes beginning...");
 
             List<GeneDef> tmpGenes = new List<GeneDef>();
             List<GeneDef> tmpGenesShuffled = new List<GeneDef>();
@@ -110,7 +115,7 @@ namespace Crewmate
 
             foreach (KeyValuePair<GeneDef, float> pair in tmpGeneChances)
             {
-                Debug($"Gene: {pair.Key.defName} has a {pair.Value} chance of being added");
+                Crewmate.Debug($"Gene: {pair.Key.defName} has a {pair.Value} chance of being added");
             }
 
             int num = 0;
@@ -171,139 +176,18 @@ namespace Crewmate
                 tmpGenes.Add(GeneDefOf.Inbred);
             }
 
-            Debug($"{tmpGenes.Count()} genes passed on");
-            Debug("Inherited gene list:");
+            Crewmate.Debug($"{tmpGenes.Count()} genes passed on");
+            Crewmate.Debug("Inherited gene list:");
             foreach (GeneDef gene in tmpGenes)
             {
-                Debug(gene.defName);
+                Crewmate.Debug(gene.defName);
             }
 
-            Debug("PREFIX: PregnancyUtility.GetInheritedGenes finishing...");
+            Crewmate.Debug("PREFIX: PregnancyUtility.GetInheritedGenes finishing...");
             
 
             __result = tmpGenes;
             return false;
-        }
-
-        /// <summary>
-        /// Rename a generated pawn (not babies) if they have the crewmate xenotype.
-        /// </summary>
-        [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn", new Type[] { typeof(PawnGenerationRequest) })]
-        public static void Postfix(ref Pawn __result)
-        {
-
-            XenotypeDef xenotype = __result.genes?.Xenotype;
-
-            if (!ModsConfig.BiotechActive || xenotype == null)
-            {
-                Debug("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
-                return;
-            }
-
-            if (xenotype.defName != "Crewmate")
-            {
-                Debug("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
-                return;
-            }
-
-            // Force nick name to be the same as the first name
-            __result.Name = generateCrewmateName(__result);
-        }
-
-        /// <summary>
-        /// Prefix pawn name generation to inject Crewmate colour naming rules.
-        /// </summary>
-        [HarmonyPatch(typeof(PawnBioAndNameGenerator), nameof(PawnBioAndNameGenerator.GeneratePawnName))]
-        public static bool Prefix(ref Pawn pawn, ref Name __result)
-        {
-            
-            XenotypeDef xenotype = pawn.genes?.Xenotype;
-
-            if (!ModsConfig.BiotechActive || xenotype == null)
-            {
-                Debug("Biotech inactive or xenotype is null. Skipping POSTFIX of PawnGenerator.GeneratePawn");
-                return true;
-            }
-
-            if (xenotype.defName != "Crewmate")
-            {
-                Debug("Pawn is not a crewmate. Skipping POSTFIX of PawnGenerator.GeneratePawn");
-                Debug($"Pawn xenotype: {xenotype.defName}");
-                return true;
-            }
-
-            __result = generateCrewmateName(pawn);
-            return false;
-        }
-
-        private static Name generateCrewmateName(Pawn pawn)
-        {
-            XenotypeDef xenotype = pawn.genes.Xenotype;
-
-            RulePackDef nameMaker = xenotype.GetNameMaker(pawn.gender);
-            bool appendNumberIfNameUsed = false;
-            string rootKeyword = null;
-            string testPawnNameSymbol = null;
-            bool forceNoNick = false;
-
-            List<Rule> extraRules = getPawnColourRules(pawn.genes); 
-
-            NameTriple name = NameTriple.FromString(NameGenerator.GenerateName(
-                nameMaker,
-                x => true,
-                appendNumberIfNameUsed,
-                rootKeyword,
-                testPawnNameSymbol,
-                extraRules),
-                forceNoNick);
-
-            // Force nick name to be the same as the first name
-            return new NameTriple(name.First, name.First, name.Last);
-        }
-
-        /// <summary>
-        /// Generate the Rule_File that corresponds to a Pawn's Crewmate_Skin_ genes.
-        /// </summary>
-        /// <returns> List of a Rules with relevant ColourName.txt strings loaded. Empty List if no Crewmate_Skin_ gene present</returns>
-        private static List<Rule> getPawnColourRules(Pawn_GeneTracker genes)
-        {
-            List<Rule> extraRules = new List<Rule>();
-
-            foreach (Gene gene in genes.Endogenes)
-            {
-
-                if (gene.def.defName.Contains("Crewmate_Skin_"))
-                {
-                    string colourName = gene.def.defName.Split("Crewmate_Skin_")[1];
-
-                    // Colour variations use base colour file
-                    if (colourName == "Saturated_Yellow") colourName = "Yellow";
-                    if (colourName == "Fortegreen") colourName = "Green";
-
-                    Rule_File rule = new Rule_File
-                    {
-                        keyword = "PAWN_skincolour",
-                        path = $"Names/OrganisedColours/{colourName}Names"
-                    };
-
-                    // Forces rule to read strings from file, otherwise the rule is unresolvable
-                    rule.Init();
-
-                    extraRules.Add(rule);
-
-                    Debug($"Added rule: {rule.keyword}->{rule.path}");
-                    Debug(rule.ToString());
-
-                }
-            }
-
-            return extraRules;
-        }
-    
-        [Conditional("DEBUG")]
-        private static void Debug(string message)
-        {
-            Log.Message(message);
         }
     }
 }

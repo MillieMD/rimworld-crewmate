@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <AbilityDef>
+        <defName>Vent</defName>
+        <label>vent</label>
+        <description>Teleport the target to a desired position not too far from its starting point.
+            Objects which are too large cannot be teleported.</description>
+        <iconPath>UI/Impostor/Vent</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <hotKey>Misc9</hotKey>
+        <statBases>
+            <Ability_Duration>0</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.25</warmupTime>
+            <range>27.9</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetItems>False</canTargetItems>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+            <warmupTime>1</warmupTime>
+            <requireLineOfSight>false</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityTeleport">
+                <compClass>CompAbilityEffect_Teleport</compClass>
+                <destination>Selected</destination>
+                <requiresLineOfSight>false</requiresLineOfSight>
+                <range>27.9</range>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+                <destClamorType>Ability</destClamorType>
+                <destClamorRadius>10</destClamorRadius>
+                <stunTicks>18~60</stunTicks>
+                <goodwillImpact>-15</goodwillImpact>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>
