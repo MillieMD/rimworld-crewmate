@@ -11,7 +11,7 @@ namespace Crewmate
     class TargettingPatches
     {
         /// <summary>
-        /// Override targetting logic so &lt;canTargetSelf$gt; takes priority over all other parameters - allowing a pawn to target themselves, even if they cannot target other Pawns
+        /// Override targetting logic so &lt;canTargetSelf&gt; takes priority over all other parameters - allowing a pawn to target themselves, even if they cannot target other Pawns
         /// </summary>
         [HarmonyPatch(typeof(TargetingParameters), nameof(TargetingParameters.CanTarget))]
         public static bool Prefix(TargetingParameters __instance, TargetInfo targ, ITargetingSource source, ref bool __result)
