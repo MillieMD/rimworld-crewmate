@@ -7,7 +7,6 @@ namespace Crewmate
     [StaticConstructorOnStartup]
     public static class Crewmate
     {
-
         static Crewmate()
         {
             var harmony = new Harmony("serprentino.amongus");

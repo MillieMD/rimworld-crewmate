@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <SoundDef>
+    <defName>Impostor_Ability_Vent</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ability/Vent</clipPath>
+          </li>
+        </grains>
+        <volumeRange>19.56522~31.52174</volumeRange>
+        <pitchRange>0.8516304~1.190761</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
