@@ -1,26 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Defs>
-    <AbilityDef>
+<AbilityDef>
     <defName>PhantomInvisibility</defName>
-    <label>invisibility</label>
-    <description>Psychically manipulate the visual centers of everyone nearby, rendering them unable to perceive a particular individual for a short time.</description>
-    <iconPath>UI/Abilities/Invisibility</iconPath>
+    <label>phantom invisibility</label>
+    <description>TODO</description>
+    <iconPath>UI/Abilities/PhantomInvisibility</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange> <!-- 2 hours -->
     <writeCombatLog>True</writeCombatLog>
     <hotKey>Misc12</hotKey>
+    <targetRequired>false</targetRequired>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>30</Ability_Duration>
+    </statBases>
     <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
       <warmupTime>1</warmupTime>
       <range>19.9</range>
-      <onlyManualCast>True</onlyManualCast>
+      <targetable>false</targetable>
       <targetParams>
         <canTargetSelf>True</canTargetSelf>
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class = "CompProperties_AbilityGiveHediff">
+      <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>PsychicInvisibility</hediffDef>
-        <psychic>true</psychic>
+        <psychic>True</psychic>
       </li>
     </comps>
   </AbilityDef>
