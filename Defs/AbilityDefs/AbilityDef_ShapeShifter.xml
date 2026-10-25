@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <AbilityDef>
+        <defName>Lie</defName>
+        <label>lie</label>
+        <description>TODO</description>
+        <iconPath>UI/Abilities/Shapeshift</iconPath>
+        <hotKey>Misc10</hotKey>
+        <cooldownTicksRange>240000</cooldownTicksRange> <!-- ~4 days in game -->
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>false</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>-1</range>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffect">
+                <compClass>CompAbilityEffect_Lie</compClass>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

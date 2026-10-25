@@ -54,10 +54,10 @@
         <description>Carriers of this gene have the shapeshifter role.</description>
         <iconPath>rolegenes/gene_shapeshifter</iconPath>
         <abilities>
-            <li>Heatspikes</li>
+            <li>Lie</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>Heatspikes</AbilityDef>
+            <AbilityDef>Lie</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
 

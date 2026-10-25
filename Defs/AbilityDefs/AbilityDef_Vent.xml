@@ -10,12 +10,12 @@
         <hotKey>Misc9</hotKey>
         <cooldownTicksRange>1200</cooldownTicksRange> <!-- ~30 minutes in game -->
         <stunTargetWhileCasting>True</stunTargetWhileCasting>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>0</Ability_Duration>
         </statBases>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>0.25</warmupTime>
             <range>20</range>
             <targetParams>
                 <canTargetSelf>True</canTargetSelf>
