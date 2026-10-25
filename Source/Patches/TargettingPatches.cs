@@ -16,6 +16,8 @@ namespace Crewmate
         [HarmonyPatch(typeof(TargetingParameters), nameof(TargetingParameters.CanTarget))]
         public static bool Prefix(TargetingParameters __instance, TargetInfo targ, ITargetingSource source, ref bool __result)
         {
+            Crewmate.Debug("PREFIX of TargetingParameters.CanTarget");
+
             if(__instance.canTargetSelf && (source?.Caster == targ.Thing))
             {
                 __result = true;
