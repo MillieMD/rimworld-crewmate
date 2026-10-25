@@ -33,7 +33,7 @@
         <biostatCpx>5</biostatCpx>
         <prerequisite>Gene_Crewmate_Body</prerequisite>
 		<exclusionTags>
-		<li>Crewmate_Roles</li>
+			<li>Crewmate_Roles</li>
 		</exclusionTags>
     </GeneDef>
 
