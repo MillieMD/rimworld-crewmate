@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace Crewmate
 {
     /// <summary>
-    /// Enable mpostor ability targetting
+    /// Enable impostor ability targetting
     /// </summary>
     [HarmonyPatch]
     class TargettingPatches
@@ -16,9 +16,8 @@ namespace Crewmate
         [HarmonyPatch(typeof(TargetingParameters), nameof(TargetingParameters.CanTarget))]
         public static bool Prefix(TargetingParameters __instance, TargetInfo targ, ITargetingSource source, ref bool __result)
         {
-            if(__instance.canTargetSelf && (source.Caster == targ.Thing))
+            if(__instance.canTargetSelf && (source?.Caster == targ.Thing))
             {
-                Crewmate.Debug("Can target self");
                 __result = true;
                 return false;
             }

@@ -8,15 +8,18 @@
         <iconPath>UI/Impostor/Vent</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <hotKey>Misc9</hotKey>
+        <cooldownTicksRange>1200</cooldownTicksRange> <!-- ~30 minutes in game -->
+        <stunTargetWhileCasting>True</stunTargetWhileCasting>
         <statBases>
             <Ability_Duration>0</Ability_Duration>
         </statBases>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.25</warmupTime>
-            <range>27.9</range>
+            <range>20</range>
             <targetParams>
-                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>False</canTargetPawns>
                 <canTargetAnimals>False</canTargetAnimals>
                 <canTargetItems>False</canTargetItems>
                 <canTargetBuildings>False</canTargetBuildings>
@@ -26,14 +29,19 @@
         </verbProperties>
         <comps>
             <li Class="CompProperties_AbilityTeleport">
-                <compClass>CompAbilityEffect_Teleport</compClass>
+                <!-- Use custom CompAbilityEffect to enable the sound effect -->
+                <compClass>CompAbilityEffect_Vent</compClass>
                 <destination>Selected</destination>
                 <requiresLineOfSight>false</requiresLineOfSight>
-                <range>27.9</range>
+                <range>20</range>
+
                 <clamorType>Ability</clamorType>
                 <clamorRadius>10</clamorRadius>
                 <destClamorType>Ability</destClamorType>
                 <destClamorRadius>10</destClamorRadius>
+
+                <sound>Impostor_Ability_Vent</sound>
+
                 <stunTicks>18~60</stunTicks>
                 <goodwillImpact>-15</goodwillImpact>
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
