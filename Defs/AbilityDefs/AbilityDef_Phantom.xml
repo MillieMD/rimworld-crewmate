@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Defs>
-<AbilityDef>
+  <AbilityDef>
     <defName>PhantomInvisibility</defName>
     <label>phantom invisibility</label>
     <description>TODO</description>
     <iconPath>UI/Abilities/PhantomInvisibility</iconPath>
-    <cooldownTicksRange>5000</cooldownTicksRange> <!-- 2 hours -->
+    <cooldownTicksRange>10000</cooldownTicksRange> <!-- 4 hours -->
     <writeCombatLog>True</writeCombatLog>
     <hotKey>Misc12</hotKey>
     <targetRequired>false</targetRequired>
@@ -30,6 +30,12 @@
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>PsychicInvisibility</hediffDef>
         <psychic>True</psychic>
+      </li>
+      <li Class="CompProperties_AbilitySmokepop">
+        <compClass>CompAbilityEffect_PhantomSmoke</compClass>
+        <smokeRadius>1.5</smokeRadius>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>0</clamorRadius>
       </li>
     </comps>
   </AbilityDef>
