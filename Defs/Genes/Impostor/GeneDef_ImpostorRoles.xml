@@ -81,10 +81,10 @@
         <description>Carriers of this gene have the viper role.</description>
         <iconPath>rolegenes/gene_viper</iconPath>
         <abilities>
-            <li>AcidSpray</li>
+            <li>ViperSpray</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>AcidSpray</AbilityDef>
+            <AbilityDef>ViperSpray</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
 </Defs>

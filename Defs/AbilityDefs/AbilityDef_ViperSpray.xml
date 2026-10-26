@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <AbilityDef>
+        <defName>ViperSpray</defName>
+        <label>acid spray</label>
+        <description>Spray a sticky acid substance from glands in the neck up through the mouth and
+            all over the target area. The acid will stick to targets and burn them.</description>
+        <iconPath>UI/Abilities/AcidSpray</iconPath>
+        <cooldownTicksRange>30000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <category>Sanguophage</category>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>8.9</range>
+            <warmupTime>0.5</warmupTime>
+            <soundCast>AcidSpray_Resolve</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>Proj_Acid</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+                <sprayEffecter>AcidSpray_Directional</sprayEffecter>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ViperBurn</hediffDef>
+                <applyToSelf>false</applyToSelf>
+                <ignoreSelf>false</ignoreSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>
