@@ -11,8 +11,8 @@
             <clipPath>Ability/Vent</clipPath>
           </li>
         </grains>
-        <volumeRange>19.56522~31.52174</volumeRange>
-        <pitchRange>0.8516304~1.190761</pitchRange>
+        <volumeRange>30~40</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
       </li>
     </subSounds>
   </SoundDef>
