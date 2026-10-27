@@ -11,7 +11,7 @@
             <li Class="HALI_RandomGenetics.Multi_Rand_List">
                 <geneList>
                     <li>
-                        <filler>30</filler>
+                        <filler>22</filler>
                         <genesAndWeight>
                             <li>
                                 <genes>
@@ -41,7 +41,6 @@
     <GeneDef Name="Impostor_Role" Abstract="True">
         <displayCategory>Crewmate_Role</displayCategory>
         <biostatCpx>5</biostatCpx>
-        <biostatArc>1</biostatArc>
         <exclusionTags>
             <li>Impostor_Role</li>
         </exclusionTags>

@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>PhantomInvisibility</defName>
     <label>phantom invisibility</label>
-    <description>TODO</description>
+    <description>Disappear into a small puff of smoke, rendering you invisible for a short time.</description>
     <iconPath>UI/Abilities/PhantomInvisibility</iconPath>
     <cooldownTicksRange>10000</cooldownTicksRange> <!-- 4 hours -->
     <writeCombatLog>True</writeCombatLog>
