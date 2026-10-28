@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <MentalBreakDef>
+        <defName>GeneImplanter</defName>
+        <mentalState>GeneImplanter</mentalState>
+        <intensity>Extreme</intensity>
+        <baseCommonality>1.5</baseCommonality>
+        <commonalityFactorPerPopulationCurve>
+            <points>
+                <li>(2, 0.1)</li>
+                <li>(7, 1)</li>
+            </points>
+        </commonalityFactorPerPopulationCurve>
+        <requiredGene>XenogermReimplanter</requiredGene>
+    </MentalBreakDef>
+</Defs>

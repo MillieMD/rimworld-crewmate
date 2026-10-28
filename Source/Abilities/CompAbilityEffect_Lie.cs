@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Crewmate;
 using Verse;
 
 namespace RimWorld
@@ -31,14 +29,12 @@ namespace RimWorld
             foreach (Faction faction in factions)
             {
                 if (random.NextDouble() > AFFECTED_CHANCE){
-                    Crewmate.Crewmate.Debug($"{faction.Name} was not affected");
                     continue;
                 }
 
                 goodWillValue = random.NextDouble() < BACKFIRE_CHANCE ? BACKFIRE_VALUE : random.Next(MIN_POS, MAX_POS);
 
                 faction.TryAffectGoodwillWith(player_faction, goodWillValue);
-                Crewmate.Crewmate.Debug($"{faction.Name} goodwill was changed by {goodWillValue}");
             }
         }
     }

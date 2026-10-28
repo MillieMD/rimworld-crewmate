@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <ThinkTreeDef>
+    <defName>InsertImplantGenes</defName>
+    <insertTag>Humanlike_PostMentalState</insertTag>
+    <insertPriority>100</insertPriority>
+    <thinkRoot Class="JobGiver_GeneImplanter" />
+  </ThinkTreeDef>
+</Defs>

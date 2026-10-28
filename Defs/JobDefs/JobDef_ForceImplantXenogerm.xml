@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <JobDef>
+        <defName>ForceImplantXenogerm</defName>
+        <driverClass>JobDriver_ForceImplantXenogerm</driverClass>
+        <reportString>implanting xenogerm into TargetA.</reportString>
+    </JobDef>
+</Defs>
