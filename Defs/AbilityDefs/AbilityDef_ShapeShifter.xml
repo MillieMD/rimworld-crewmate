@@ -7,7 +7,7 @@
             chance to backfire.</description>
         <iconPath>UI/Abilities/Shapeshift</iconPath>
         <hotKey>Misc10</hotKey>
-        <cooldownTicksRange>240000</cooldownTicksRange> <!-- ~4 days in game -->
+        <cooldownTicksRange>18000</cooldownTicksRange> <!-- ~3 days in game -->
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -19,6 +19,7 @@
         <comps>
             <li Class="CompProperties_AbilityEffect">
                 <compClass>CompAbilityEffect_Lie</compClass>
+                <sound>Impostor_Ability_Shapeshift</sound>
             </li>
         </comps>
     </AbilityDef>

@@ -16,4 +16,21 @@
       </li>
     </subSounds>
   </SoundDef>
+
+    <SoundDef>
+    <defName>Impostor_Ability_Shapeshift</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ability/Shapeshift</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~40</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 </Defs>
