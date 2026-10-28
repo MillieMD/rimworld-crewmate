@@ -3,11 +3,14 @@
     <AbilityDef>
         <defName>Lie</defName>
         <label>Shape Shift</label>
-        <description>Shift your skin to make your faction appear more trustworthy to others. Has a chance to backfire.</description>
+        <description>Shift your skin to make your faction appear more trustworthy to others. Has a
+            chance to backfire.</description>
         <iconPath>UI/Abilities/Shapeshift</iconPath>
         <hotKey>Misc10</hotKey>
         <cooldownTicksRange>240000</cooldownTicksRange> <!-- ~4 days in game -->
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
         <targetRequired>false</targetRequired>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
