@@ -15,7 +15,6 @@
                 <compClass>HediffComp_DissolveBody</compClass>
             </li>
             <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>7500</disappearsAfterTicks> <!-- 3 hours -->
                 <showRemainingTime>true</showRemainingTime>
             </li>
         </comps>

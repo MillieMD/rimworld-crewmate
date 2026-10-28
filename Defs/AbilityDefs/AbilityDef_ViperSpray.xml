@@ -3,8 +3,7 @@
     <AbilityDef>
         <defName>ViperSpray</defName>
         <label>acid spray</label>
-        <description>Spray a sticky acid substance from glands in the neck up through the mouth and
-            all over the target area. The acid will stick to targets and burn them.</description>
+        <description>TODO</description>
         <iconPath>UI/Abilities/AcidSpray</iconPath>
         <cooldownTicksRange>30000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -12,6 +11,9 @@
         <category>Sanguophage</category>
         <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
         <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <statBases>
+            <Ability_Duration>130</Ability_Duration>  <!-- ~3 hours -->
+        </statBases>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <range>8.9</range>
