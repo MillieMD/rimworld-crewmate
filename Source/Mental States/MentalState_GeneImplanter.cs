@@ -20,6 +20,7 @@ namespace Verse.AI
             if (target != null && target.genes?.Xenotype == pawn.genes?.Xenotype)
             {
                 RecoverFromState();
+                return;
             }
             if (pawn.IsHashIntervalTick(120, delta) && !IsTargetStillValidAndReachable())
             {
