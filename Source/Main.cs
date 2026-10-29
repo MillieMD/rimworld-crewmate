@@ -1,5 +1,6 @@
 using Verse;
 using HarmonyLib;
+using Multiplayer.API;
 using System.Diagnostics;
 
 namespace Crewmate
@@ -12,6 +13,11 @@ namespace Crewmate
             var harmony = new Harmony("serprentino.amongus");
             harmony.PatchAll();
             Debug("CrewmatePatches initialised");
+
+            // Multiplayer patches start here!
+            if(!MP.enabled) return;
+
+            MP.RegisterAll();
         }
 
         /// <summary>

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Multiplayer.API;
 using Verse;
 
 namespace RimWorld
 {
-    /// <summary>
-    /// Clone of CompAbilityEffect_Teleport - except in PreCastAction where the sound effect from Props is used, to allow the Vent sound effect to play
-    /// </summary>
     public class CompAbilityEffect_Lie : CompAbilityEffect
     {
         const float AFFECTED_CHANCE = 0.4f;
@@ -15,12 +13,12 @@ namespace RimWorld
         const double BACKFIRE_CHANCE = 0.1f;
         const int BACKFIRE_VALUE = -25;
 
-        static Random random = new Random();
-        static FactionManager factionManager = Find.FactionManager;
-
+        [SyncMethod]
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+
+            FactionManager factionManager = Find.FactionManager;
 
             IEnumerable<Faction> factions = factionManager.AllFactionsVisible;
             Faction player_faction = factionManager.OfPlayer;
@@ -28,12 +26,11 @@ namespace RimWorld
 
             foreach (Faction faction in factions)
             {
-                if (random.NextDouble() > AFFECTED_CHANCE){
+                if (Rand.Value > AFFECTED_CHANCE){
                     continue;
                 }
 
-                goodWillValue = random.NextDouble() < BACKFIRE_CHANCE ? BACKFIRE_VALUE : random.Next(MIN_POS, MAX_POS);
-
+                goodWillValue =  Rand.Value < BACKFIRE_CHANCE ? BACKFIRE_VALUE : Rand.RangeInclusive(MIN_POS, MAX_POS);
                 faction.TryAffectGoodwillWith(player_faction, goodWillValue);
             }
         }

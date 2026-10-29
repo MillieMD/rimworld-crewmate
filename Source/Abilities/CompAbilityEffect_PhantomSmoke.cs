@@ -1,16 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using Crewmate;
-using Unity.Burst;
 using Verse;
 
 namespace RimWorld
 {
-    /// <summary>
-    /// Clone of CompAbilityEffect_Teleport - except in PreCastAction where the sound effect from Props is used, to allow the Vent sound effect to play
-    /// </summary>
     public class CompAbilityEffect_PhantomSmoke : CompAbilityEffect_Smokepop
     {
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
