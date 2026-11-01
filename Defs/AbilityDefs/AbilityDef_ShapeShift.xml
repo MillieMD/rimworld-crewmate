@@ -2,7 +2,7 @@
 <Defs>
     <AbilityDef>
         <defName>Lie</defName>
-        <label>Shape Shift</label>
+        <label>Shapeshift</label>
         <description>Shift your skin to make your faction appear more trustworthy to others. Has a
             chance to backfire.</description>
         <iconPath>UI/Abilities/Shapeshift</iconPath>

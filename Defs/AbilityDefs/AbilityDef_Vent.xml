@@ -4,7 +4,7 @@
         <defName>Vent</defName>
         <label>vent</label>
         <description>Skips the target a short distance away; can only target yourself.</description>
-        <iconPath>UI/Impostor/Vent</iconPath>
+        <iconPath>UI/Abilities/Vent</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <hotKey>Misc9</hotKey>
         <cooldownTicksRange>1200</cooldownTicksRange> <!-- ~30 minutes in game -->

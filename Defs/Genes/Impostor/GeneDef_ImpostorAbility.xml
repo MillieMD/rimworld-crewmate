@@ -3,8 +3,8 @@
     <GeneDef>
         <defName>Impostor_Vent</defName>
         <label>vent</label>
-        <description></description>
-        <iconPath>UI/Icons/Genes/Gene_AcidSpray</iconPath>
+        <description>Carriers of this gene gain a modified skip power that allows them to only target themselves.</description>
+        <iconPath>othergenes/ventskip</iconPath>
         <displayCategory>Ability</displayCategory>
         <marketValueFactor>1.5</marketValueFactor>
         <abilities>

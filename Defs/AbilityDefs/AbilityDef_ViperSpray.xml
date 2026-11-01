@@ -2,9 +2,9 @@
 <Defs>
     <AbilityDef>
         <defName>ViperSpray</defName>
-        <label>acid spray</label>
-        <description>TODO</description>
-        <iconPath>UI/Abilities/AcidSpray</iconPath>
+        <label>viper acid spray</label>
+        <description>Spray out a sticky acidic substance that coats the target's body. If the target dies while coated then their body and belongings are destroyed upon death.</description>
+        <iconPath>UI/Abilities/VAcidSpray</iconPath>
         <cooldownTicksRange>30000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>

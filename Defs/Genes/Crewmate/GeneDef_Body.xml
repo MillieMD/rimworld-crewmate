@@ -41,7 +41,7 @@
     <biostatMet>-1</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
     <displayOrderInCategory>400</displayOrderInCategory>
-    <iconPath>backpack</iconPath>
+    <iconPath>othergenes/backpack</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <statOffsets>
       <CarryingCapacity>45</CarryingCapacity>
