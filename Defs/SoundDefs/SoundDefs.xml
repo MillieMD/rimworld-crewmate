@@ -1,6 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Defs>
   <SoundDef>
+    <defName>Crewmate_GameStart</defName>
+    <maxVoices>1</maxVoices>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>AmongUsGameStart</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>Impostor_Ability_Vent</defName>
     <context>MapOnly</context>
     <maxSimultaneous>1</maxSimultaneous>
@@ -17,7 +34,7 @@
     </subSounds>
   </SoundDef>
 
-    <SoundDef>
+  <SoundDef>
     <defName>Impostor_Ability_Shapeshift</defName>
     <context>MapOnly</context>
     <maxSimultaneous>1</maxSimultaneous>

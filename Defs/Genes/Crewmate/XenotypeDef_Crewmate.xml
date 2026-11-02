@@ -22,7 +22,7 @@
       <!-- Colours -->
       <li>Crewmate_Colour</li> <!-- We made this one -->
       
-	  <!-- Chance for a Role -->
+	    <!-- Chance for a Role -->
       <li>Crewmate_Role</li> <!-- We made this one -->
       
       <!-- Lobby Settings; we made all of these -->
@@ -39,7 +39,7 @@
       <li>MeleeDamage_Weak</li>
       <li>AptitudeStrong_Crafting</li>
       <li>BetterMining</li> <!-- We made this one -->  
-	  <li>ToxicEnvironmentResistance_Partial</li>
+	    <li>ToxicEnvironmentResistance_Partial</li>
     </genes>
   </XenotypeDef>
 </Defs>
