@@ -5,6 +5,7 @@
         <label>cannibal</label>
         <labelShortAdj>cannibal</labelShortAdj>
         <iconPath>UI/Memes/Cannibal</iconPath>
+        <description>TODO</description>
         <biostatMet>1</biostatMet>
         <forcedTraits>
             <li>
