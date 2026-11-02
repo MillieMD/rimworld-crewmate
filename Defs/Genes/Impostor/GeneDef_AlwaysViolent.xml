@@ -5,6 +5,7 @@
         <label>always violent</label>
         <labelShortAdj>violent</labelShortAdj>
         <description>TODO</description>
+        <iconPath>UI/Icons/Genes/Gene_StrongMeleeDamage</iconPath>
         <modExtensions>
             <li Class="Crewmate.ViolenceOverride">
                 <overrideIncapableViolence>true</overrideIncapableViolence>

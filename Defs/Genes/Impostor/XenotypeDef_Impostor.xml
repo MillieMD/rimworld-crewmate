@@ -27,6 +27,7 @@
             <li>MeleeDamage_Strong</li>
             <li>AptitudeStrong_Melee</li>
             <li>AptitudeStrong_Shooting</li>
+            <li>AlwaysViolent</li>
         </genes>
 
         <!-- Generated Impostors always spawn as a Crewmate -->
