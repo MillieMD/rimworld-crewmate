@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <GeneDef>
+        <defName>Cannibal</defName>
+        <label>cannibal</label>
+        <labelShortAdj>cannibal</labelShortAdj>
+        <iconPath>UI/Memes/Cannibal</iconPath>
+        <biostatMet>1</biostatMet>
+        <forcedTraits>
+            <li>
+                <def>Cannibal</def>
+            </li>
+        </forcedTraits>
+    </GeneDef>
+</Defs>
