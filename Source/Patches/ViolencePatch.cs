@@ -16,7 +16,6 @@ namespace Crewmate
         [HarmonyPatch(typeof(Pawn), "WorkTagIsDisabled")]
         public static bool Prefix(Pawn __instance, WorkTags w, ref bool __result)
         {
-            Log.Message("PREFIX of Pawn::WorkTagIsDisabled");
 
             if(!ModsConfig.BiotechActive) return true; // Just do the normal method
 

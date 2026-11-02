@@ -48,9 +48,7 @@ namespace Verse.AI
 
         private bool TryFindNewTarget()
         {
-            Crewmate.Crewmate.Debug($"Finding target for {pawn.Name}'s mental state");
             target = GeneImplanterMentalStateUtility.FindPawnToImplant(pawn);
-            Crewmate.Crewmate.Debug($"Target found: {target.Name}");
             return target != null;
         }
 

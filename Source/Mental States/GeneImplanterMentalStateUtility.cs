@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Text;
 
 namespace Verse.AI
 {
@@ -28,19 +27,12 @@ namespace Verse.AI
                     && candidate.genes?.Xenotype != pawn.genes?.Xenotype)) // AND not the same xenotype
                 {
                     potentialTargets.Add(candidate);
-                    Crewmate.Crewmate.Debug($"Selected: {candidate}");
                 }
             }
 
             if(!potentialTargets.Any())
             {
-                Crewmate.Crewmate.Debug("No targets found. Returning null");
                 return null;
-            }
-
-            foreach(Pawn target in potentialTargets)
-            {
-                Crewmate.Crewmate.Debug($"Potential Target: {target.Name}");
             }
 
             return potentialTargets.RandomElement();
