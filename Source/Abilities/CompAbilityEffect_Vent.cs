@@ -11,13 +11,10 @@ namespace RimWorld
     {
         public override IEnumerable<PreCastAction> GetPreCastActions()
         {
-            Log.Message("get vent pre cast");
             yield return new PreCastAction
             {
                 action = delegate (LocalTargetInfo t, LocalTargetInfo d)
                 {
-
-                    Log.Message("called precast action for vent");
 
                     if (!parent.def.HasAreaOfEffect)
                     {

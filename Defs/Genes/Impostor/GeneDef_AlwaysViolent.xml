@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <GeneDef>
+        <defName>AlwaysViolent</defName>
+        <label>always violent</label>
+        <labelShortAdj>violent</labelShortAdj>
+        <description>TODO</description>
+        <modExtensions>
+            <li Class="Crewmate.ViolenceOverride">
+                <overrideIncapableViolence>true</overrideIncapableViolence>
+            </li>
+        </modExtensions>
+    </GeneDef>
+</Defs>

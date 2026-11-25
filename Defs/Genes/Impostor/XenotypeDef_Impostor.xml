@@ -20,6 +20,7 @@
             <li>UVSensitivity_Mild</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">MoveSpeed_Space</li>
             
+            <li>Cannibal</li>
             <li>Pain_Reduced</li>
             <li>KillThirst</li>
             <li>Aggression_HyperAggressive</li>
