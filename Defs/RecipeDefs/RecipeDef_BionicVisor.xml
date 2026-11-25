@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallBionicVisor</defName>
+        <label>install bionic visor</label>
+        <description>Install a bionic visor.</description>
+        <descriptionHyperlinks>
+            <ThingDef>BionicVisor</ThingDef>
+            <HediffDef>BionicVisor</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing bionic visor.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BionicVisor</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>BionicVisor</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Crewmate_Visor</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>BionicVisor</addsHediff>
+    </RecipeDef>
+</Defs>

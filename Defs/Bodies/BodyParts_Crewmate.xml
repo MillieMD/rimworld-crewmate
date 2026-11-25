@@ -25,7 +25,7 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>Visor</defName>
+        <defName>Crewmate_Visor</defName>
         <label>visor</label>
         <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>

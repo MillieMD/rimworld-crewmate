@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>BionicVisor</defName>
+        <label>bionic visor</label>
+        <description>TODO</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallBionicVisor</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+        </statBases>
+    </ThingDef>
+</Defs>
