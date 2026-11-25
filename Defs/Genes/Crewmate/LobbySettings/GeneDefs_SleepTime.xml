@@ -35,8 +35,6 @@
 		<li>Sleep</li>
 		<li>Crewmate_Sleeps</li>
 		</exclusionTags>
-
-        <!-- TODO: B&S prereq crewmate race -->
     </GeneDef>
 
     <GeneDef ParentName="CrewmateSleepBase">

@@ -27,7 +27,7 @@
     <BodyPartDef>
         <defName>Visor</defName>
         <label>visor</label>
-        <hitPoints>15</hitPoints>
+        <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
         <skinCovered>false</skinCovered>
         <solid>true</solid>
