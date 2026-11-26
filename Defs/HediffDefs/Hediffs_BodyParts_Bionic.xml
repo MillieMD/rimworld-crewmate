@@ -18,14 +18,11 @@
                 <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
                 <texPath>Things/Pawn/Wounds/BionicVisor</texPath>
                 <rotDrawMode>Fresh</rotDrawMode>
-                <parentTagDef>Eyes</parentTagDef>
+                <parentTagDef>Head</parentTagDef>
                 <drawData>
                     <defaultData>
                         <layer>100</layer>
                     </defaultData>
-					<dataWest>
-						<flip>true</flip>
-					</dataWest>
                 </drawData>
             </li>
         </renderNodeProperties>
