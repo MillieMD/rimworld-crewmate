@@ -41,7 +41,7 @@
           </groups>
         </li>
         <li>
-          <!-- HEART 3 -->
+          <!-- HEART <3 -->
           <def>Heart</def>
           <coverage>0.020</coverage>
           <depth>Inside</depth>
@@ -99,6 +99,7 @@
           </groups>
         </li>
         <li>
+		  <!-- HEAD -->
           <def>Head</def>
           <coverage>0.3</coverage>
           <groups>
@@ -157,6 +158,7 @@
               <visibleHediffRots>
                 <li>South</li>
                 <li>West</li>
+				<li>East</li>
               </visibleHediffRots>
             </li>
             <li>
