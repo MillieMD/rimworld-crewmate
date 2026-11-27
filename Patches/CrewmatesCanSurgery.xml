@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- AAA -->
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef/recipeUsers</xpath>
+        <value>
+            <li>Crewmate</li>
+        </value>
+    </Operation>
+</Patch>

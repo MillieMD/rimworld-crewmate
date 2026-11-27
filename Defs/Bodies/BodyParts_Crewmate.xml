@@ -34,6 +34,7 @@
         <bleedRate>0</bleedRate>
         <canScarify>true</canScarify>
         <beautyRelated>true</beautyRelated>
+		<canSuggestAmputation>false</canSuggestAmputation>
         <tags>
             <li>SightSource</li>
         </tags>

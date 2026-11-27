@@ -8,7 +8,7 @@
         <bodyGraphicScale>(1, 0.9)</bodyGraphicScale>
     </BodyTypeDef>
 
-        <BodyTypeDef>
+    <BodyTypeDef>
         <defName>Crewmate_Child</defName>
         <headOffset>(0.04, 0.34)</headOffset>
         <bodyNakedGraphicPath>Crewmate/Child_Crewmate</bodyNakedGraphicPath>
